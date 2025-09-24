@@ -919,7 +919,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.why-number {
+    color: white; /* text alb */
+    -webkit-text-stroke: 2px #00BFFF; /* contur albastru electric */
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
 .testimonial-header {
   display: flex;
   align-items: center;
