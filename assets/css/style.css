@@ -589,7 +589,7 @@ body {
   flex-wrap: wrap;
   /* pe mobil se va împacheta */
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -609,6 +609,7 @@ body {
 /* conținutul ocupă restul */
 .about-content {
   flex: 2 1 500px;
+  text-align: left;
 }
 
 .about-content h2 {
@@ -617,11 +618,21 @@ body {
 }
 
 .about-content p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
   text-shadow: 0 0 10px var(--dark-neon-albastru);
-}
+    line-height: 1.6;
 
+}
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-content {
+    text-align: center;
+  }
+}
 .about-values {
   list-style: none;
   padding: 0;
@@ -772,13 +783,12 @@ body {
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   width: 300px;
-  height: 500px;
-  /* vertical rectangle */
+  min-height: 500px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .home-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 15px var(--dark-neon-albastru), 0 0 30px var(--dark-neon-albastru);
@@ -1155,4 +1165,55 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   color: var(--light-text);
   text-shadow: 0 0 5px var(--light-neon-albastru);
 }
+/* ================= FOOTER CONTACT ================= */
+.footer-contact {
+  margin-bottom: 20px;
+}
 
+.footer-icon {
+  font-size: 2rem;
+  margin: 0 15px;
+  color: #b026ff; /* mov implicit */
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px #b026ff;
+}
+
+.footer-icon:hover {
+  color: #00f0ff; /* albastru electric neon */
+  text-shadow: 0 0 12px #00f0ff, 0 0 24px #00f0ff;
+}
+
+.footer-text {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #fff;
+  text-shadow: 0 0 5px #b026ff, 0 0 10px #b026ff;
+}
+
+.light-mode .footer-text {
+  color: #000;
+  text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff;
+}
+/* ================= HEADER PHONE ================= */
+.navbar-phone {
+  margin-left: 20px;
+  font-size: 1.1rem;
+}
+
+.navbar-phone a {
+  color: #b026ff; /* mov implicit */
+  text-decoration: none;
+  text-shadow: 0 0 6px #b026ff;
+  transition: all 0.3s ease;
+}
+
+.navbar-phone a:hover {
+  color: #00f0ff; /* albastru electric neon */
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+}
+
+/* Light Mode */
+.light-mode .navbar-phone a {
+  color: #000;
+  text-shadow: 0 0 5px #00f0ff;
+}
