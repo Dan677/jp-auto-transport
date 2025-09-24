@@ -1219,3 +1219,24 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   color: #000;
   text-shadow: 0 0 5px #00f0ff;
 }
+/* ================= OUR REALS ================= */
+.real-card {
+  border: 2px solid var(--dark-neon-albastru);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px var(--dark-neon-albastru), 0 0 25px var(--dark-neon-albastru);
+  background-color: rgba(0,0,0,0.6);
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.real-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--dark-neon-mov), 0 0 40px var(--dark-neon-mov);
+}
+
+.light-mode .real-card {
+  border-color: var(--light-neon-menta);
+  box-shadow: 0 0 12px var(--light-neon-menta), 0 0 25px var(--light-neon-menta);
+  background-color: rgba(255,255,255,0.9);
+}
