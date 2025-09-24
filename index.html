@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JP Auto Transport | Door-to-Door Car Transport</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">JP Auto Transport</a>
+
+    <!-- Buton dark/light pe desktop -->
+    <button id="themeToggle" class="btn btn-neon d-none d-lg-block me-2">
+      <i id="themeIcon" class="fas fa-eye-slash"></i>
+    </button>
+
+    <!-- Hamburger mereu vizibil -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Buton X în interiorul meniului -->
+      <button id="closeMenu" class="btn btn-close d-lg-none">&times;</button>
+
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+        <!-- Buton dark/light în meniul mobil -->
+        <li class="nav-item d-lg-none">
+          <button id="themeToggleMobile" class="btn btn-neon">
+            <i id="themeIconMobile" class="fas fa-eye-slash"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="about" class="section section-albastru">
+  <div class="container about-container">
+
+    <!-- Stânga: imaginea -->
+    <div class="about-image">
+      <img src="assets/images/About_us.png" alt="JP Auto Transport Fleet">
+    </div>
+
+    <!-- Dreapta: conținutul -->
+    <div class="about-content">
+      <h2><span class="neon-mov">Home</span>
+        <p class="service-text">
+          At JP Auto Transport, we specialize in safe, fast, and reliable vehicle shipping across the United States. With years of experience and a professional team, we ensure every car is delivered with care and precision.
+        </p>
+      <ul class="about-values">
+        <li><span class="neon-icon">🚗</span> Professional nationwide car transport</li>
+        <li><span class="neon-icon">🛡️</span> Fully insured & secure delivery</li>
+        <li><span class="neon-icon">⏱️</span> On-time and reliable service</li>
+        <li><span class="neon-icon">📞</span> Dedicated customer support</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="home" class="section section-mov pt-5 home-section">
+  <div class="container">
+
+    <h1 class="text-center"><h2><span class="neon-mov">About</span> <span class="neon-albastru">Us</span></h2>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Card 1 -->
+        <div class="swiper-slide home-card">
+          <div class="home-card-image">
+            <img src="assets/images/Dark_mode_Background.png" alt="Our Goal">
+          </div>
+          <div class="home-card-title">Our Goal</div>
+          <button class="btn btn-neon read-more-btn">Read More</button>
+          <p class="read-more-text">
+            We specialize in professional vehicle shipping, providing door-to-door service anywhere in the United States with full insurance and dedicated support.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="swiper-slide home-card">
+          <div class="home-card-image">
+            <img src="assets/images/placeholder.png" alt="Title 2">
+          </div>
+          <div class="home-card-title">What We Have to Offer</div>
+          <button class="btn btn-neon read-more-btn">Read More</button>
+          <p class="read-more-text">At JP Auto Transport, we take great satisfaction in offering hassle-free, effective, dependable, and trustworthy car shipping services across the country. The purpose of our rapid quotation procedure is to offer you with a variety of price options and all the information you need to make an informed choice regarding your vehicle shipping requirements.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="swiper-slide home-card">
+          <div class="home-card-image">
+            <img src="assets/images/placeholder.png" alt="Title 3">
+          </div>
+          <div class="home-card-title">Why Customers Trust Us?</div>
+          <button class="btn btn-neon read-more-btn">Read More</button>
+          <p class="read-more-text">At JP Auto Transport, customer trust is the foundation of everything we do.
+            From the moment you book with us until your vehicle arrives safely at its destination, we focus on providing a seamless, reliable, and stress-free experience.</p>
+        </div>
+
+        <div class="swiper-slide home-card">
+          <div class="home-card-image">
+            <img src="assets/images/placeholder.png" alt="Title 3">
+          </div>
+          <div class="home-card-title">Our Mission</div>
+          <button class="btn btn-neon read-more-btn">Read More</button>
+          <p class="read-more-text">We serve a wide spectrum of customers, including both individuals and companies, by providing outstanding car transportation services.
+            Our steadfast commitment to quality and safety sets us apart, guaranteeing safe and prompt car delivery.
+            These principles motivate us to be the reliable partner in the transportation sector, promoting client happiness and facilitating the smooth operation of automobiles.</p>
+        </div>
+
+        <div class="swiper-slide home-card">
+          <div class="home-card-image">
+            <img src="assets/images/placeholder.png" alt="Title 3">
+          </div>
+          <div class="home-card-title">Our Vision</div>
+          <button class="btn btn-neon read-more-btn">Read More</button>
+          <p class="read-more-text">At JP Auto Transport, we take great satisfaction in offering hassle-free, effective, dependable, and trustworthy car shipping services across the country.
+            The purpose of our rapid quotation procedure is to offer you with a variety of price options and all the information you need to make an informed choice regarding your vehicle shipping requirements.</p>
+        </div>
+
+        <div class="swiper-slide home-card">
+          <div class="home-card-image">
+            <img src="assets/images/placeholder.png" alt="Title 3">
+          </div>
+          <div class="home-card-title">What we offer</div>
+          <button class="btn btn-neon read-more-btn">Read More</button>
+          <p class="read-more-text">Our goal at JP Auto is to set the bar for innovation and quality in order to dominate the auto transport sector.
+            Our goal is to become the go-to partner for companies and individuals looking for innovative, dependable, and efficient transportation solutions.</p>
+        </div>
+
+      </div>
+
+      <!-- Săgeți Swiper -->
+      <div class="swiper-controls">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="services" class="section section-mov">
+  <div class="container">
+    <h2><span class="neon-mov">Our</span> <span class="neon-albastru">Services</span></h2>
+    <p>Reliable car transport solutions across the USA.</p>
+
+    <!-- Carousel Start -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Service 1 -->
+        <div class="swiper-slide service-card">
+          <i class="fas fa-car-side service-icon"></i>
+          <h3>Vehicle Transport</h3>
+          <p>Safe and fast delivery of cars across short and long distances.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="swiper-slide service-card">
+          <i class="fas fa-flag-usa service-icon"></i>
+          <h3>Nationwide Transport</h3>
+          <p>Door-to-door vehicle shipping anywhere in the United States.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="swiper-slide service-card">
+          <i class="fas fa-shield-alt service-icon"></i>
+          <h3>Insurance</h3>
+          <p>Full insurance coverage for your vehicle during transport.</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="swiper-slide service-card">
+          <i class="fas fa-map-marked-alt service-icon"></i>
+          <h3>Route Planning</h3>
+          <p>Optimized routes to ensure fast and cost-effective delivery.</p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="swiper-slide service-card">
+          <i class="fas fa-warehouse service-icon"></i>
+          <h3>Storage</h3>
+          <p>Secure short-term storage for vehicles before or after transport.</p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="swiper-slide service-card">
+          <i class="fas fa-headset service-icon"></i>
+          <h3>Customer Support</h3>
+          <p>24/7 assistance for updates, inquiries, and personalized solutions.</p>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Optional: Read More button -->
+    <button class="btn btn-neon" id="servicesBtn">Read More</button>
+    <p id="servicesText" class="read-more-text">We specialize in car transport across the United States with a focus on safety, reliability, and customer satisfaction. From individual cars to fleets, JP Auto Transport ensures secure and timely delivery nationwide.</p>
+  </div>
+</section>
+
+
+<section id="gallery" class="section section-albastru">
+  <div class="container">
+    <h2><span class="neon-mov">Our</span> <span class="neon-albastru">Gallery</span></h2>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="gallery-card">
+            <img src="https://via.placeholder.com/800x400?text=Image+1" class="d-block w-100" alt="Gallery Image 1">
+            <div class="gallery-info">
+              <p>Image 1 - Web Design Showcase</p>
+              <button class="btn btn-neon btn-sm">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="gallery-card">
+            <img src="https://via.placeholder.com/800x400?text=Image+2" class="d-block w-100" alt="Gallery Image 2">
+            <div class="gallery-info">
+              <p>Image 2 - App Development Preview</p>
+              <button class="btn btn-neon btn-sm">Read More</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="gallery-card">
+            <img src="https://via.placeholder.com/800x400?text=Image+3" class="d-block w-100" alt="Gallery Image 3">
+            <div class="gallery-info">
+              <p>Image 3 - Digital Marketing Campaign</p>
+              <button class="btn btn-neon btn-sm">Read More</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="section section-albastru">
+  <div class="container">
+    <h2><span class="neon-mov">Our</span> <span class="neon-albastru">Testimonials</span></h2>
+    <p>Honest feedback from satisfied customers.</p>
+
+    <!-- Swiper container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-right testimonial-quote-icon"></i>
+            <div class="testimonial-header">
+              <img src="assets/images/placeholder_profile.png" alt="Client Adriana F." class="testimonial-img">
+              <div class="testimonial-author">
+                <h4>Adriana F.</h4>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Kevin was extremely professional and very nice! He was the only company that allowed us to drop our car off early. He answered all my questions and responded immediately by text. Don't waste your time with anyone else!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-right testimonial-quote-icon"></i>
+            <div class="testimonial-header">
+              <img src="assets/images/placeholder_profile.png" alt="Client Mark T." class="testimonial-img">
+              <div class="testimonial-author">
+                <h4>Mark T.</h4>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Seamless process from start to finish. My car arrived earlier than expected and without a single scratch. The driver was communicative and courteous. I highly recommend JP Auto Transport for their reliability and great service."
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-right testimonial-quote-icon"></i>
+            <div class="testimonial-header">
+              <img src="assets/images/placeholder_profile.png" alt="Client Sarah L." class="testimonial-img">
+              <div class="testimonial-author">
+                <h4>Sarah L.</h4>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "I was nervous about shipping my classic car across the country, but the team at JP handled it with extreme care. The enclosed transport option was perfect, and the price was very fair. A five-star experience all around!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-right testimonial-quote-icon"></i>
+            <div class="testimonial-header">
+              <img src="assets/images/placeholder_profile.png" alt="Client David Chen" class="testimonial-img">
+              <div class="testimonial-author">
+                <h4>David Chen</h4>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "Fast, efficient, and affordable. I received a quote within minutes, and the booking process was simple. My SUV was picked up and delivered on the exact dates promised. Will definitely use their services again."
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-right testimonial-quote-icon"></i>
+            <div class="testimonial-header">
+              <img src="assets/images/placeholder_profile.png" alt="Client Emily R." class="testimonial-img">
+              <div class="testimonial-author">
+                <h4>Emily R.</h4>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "The customer support is top-notch. They kept me updated throughout the entire transport process with texts and calls. It gave me peace of mind knowing my vehicle was in good hands. A truly professional company."
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-right testimonial-quote-icon"></i>
+            <div class="testimonial-header">
+              <img src="assets/images/placeholder_profile.png" alt="Client Ramona B." class="testimonial-img">
+              <div class="testimonial-author">
+                <h4>Ramona B.</h4>
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="testimonial-text">
+              "The customer support is top-notch. They kept me updated throughout the entire transport process with texts and calls. It gave me peace of mind knowing my vehicle was in good hands. A truly professional company."
+            </p>
+          </div>
+        </div>
+
+      </div> <!-- .swiper-wrapper -->
+    </div> <!-- .swiper -->
+
+    <!-- Navigation arrows under cards -->
+    <div class="testimonial-navigation">
+      <div class="swiper-button-prev testimonials-button-prev"></div>
+      <div class="swiper-button-next testimonials-button-next"></div>
+    </div>
+
+  </div> <!-- .container -->
+</section>
+<section id="why-choose-us" class="section section-albastru">
+  <div class="container">
+    <h2><span class="neon-mov">Why To</span> <span class="neon-albastru">Choose Us</span></h2>
+
+    <div class="why-cards">
+      <!-- Card 1 -->
+      <div class="why-card">
+        <div class="why-number">1</div>
+        <h3>Get Instant Quote</h3>
+        <p>No matter if you’re shipping a car across the country or to a neighboring state,
+          we calculate auto transport cost faster than any other car moving company.</p>
+        <p>Contact us today to receive a customized quote with multiple pricing options and experience
+          the peace of mind that comes with choosing the best in the business.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="why-card">
+        <div class="why-number">2</div>
+        <h3>Professionalism</h3>
+        <p>We maintain a high level of professionalism in all interactions, from the appearance and conduct of employees to the quality of service provided.
+          As professionals we also build trust and credibility.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="why-card">
+        <div class="why-number">3</div>
+        <h3>Customer Satisfaction</h3>
+        <p>Providing excellent customer service and ensuring customer satisfaction should be a core value.
+          This includes clear communication, responsiveness to customer inquiries, and addressing any concerns promptly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section section-mov">
+  <div class="container">
+    <h2><span class="neon-mov">Contact</span> <span class="neon-albastru">Us</span></h2>
+    <form style="max-width:600px; margin:auto; text-align:left;">
+      <div class="mb-3">
+        <label for="name">Name</label>
+        <input type="text" class="form-control custom-focus" id="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone">Phone Number</label>
+        <input type="tel" class="form-control custom-focus" id="phone" required>
+      </div>
+      <div class="mb-3">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control custom-focus" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message">Message</label>
+        <textarea class="form-control custom-focus" id="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-neon">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<section id="footer" class="section section-albastru">
+  <div class="container">
+    <p>&copy; 2025 JP Auto Transport. All Rights Reserved.</p>
+    <p>Built with ❤️ for Paul</p>
+  </div>
+</section>
+<button id="topBtn" title="Go to top">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>
