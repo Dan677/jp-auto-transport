@@ -755,7 +755,9 @@ body {
   text-shadow: 0 0 5px var(--dark-neon-mov);
   text-align: left;
 }
-
+.read-more-text.text-centered {
+  text-align: center; /* doar centru, restul stilurilor rămân */
+}
 .read-more-text.active {
   display: block;
   /* apare doar când îi adaugi clasa .active din JS */
