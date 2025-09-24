@@ -200,3 +200,18 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 });
+ document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("toggleBlogsBtn");
+    const extraBlogs = document.querySelectorAll(".extra-blog");
+
+    toggleBtn.addEventListener("click", function () {
+      if (toggleBtn.textContent === "Load More") {
+        extraBlogs.forEach(el => el.style.display = "block");
+        toggleBtn.textContent = "Load Less";
+      } else {
+        extraBlogs.forEach(el => el.style.display = "none");
+        toggleBtn.textContent = "Load More";
+        document.getElementById("blogs").scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
