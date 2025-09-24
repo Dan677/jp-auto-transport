@@ -1240,3 +1240,22 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   box-shadow: 0 0 12px var(--light-neon-menta), 0 0 25px var(--light-neon-menta);
   background-color: rgba(255,255,255,0.9);
 }
+#reals .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; /* toate coloanele au aceeași înălțime */
+}
+
+.real-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.real-video {
+  width: 100%;
+  height: 350px;         /* toate vor avea aceeași înălțime */
+  object-fit: cover;     /* taie marginile ca să nu deformeze video */
+  border-radius: 8px;
+}
