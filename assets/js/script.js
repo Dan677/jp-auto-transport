@@ -31,7 +31,7 @@ document.querySelectorAll('.read-more-btn').forEach(btn => {
 ========================*/
 const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 navLinks.forEach(link => {
-  link.addEventListener('click', function() {
+  link.addEventListener('click', function () {
     navLinks.forEach(l => l.classList.remove('active'));
     this.classList.add('active');
   });
@@ -122,13 +122,12 @@ const initSwiper = (selector) => {
       el: selector + " .swiper-pagination",
       clickable: true,
       renderBullet: function (index, className) {
-        // Calcul dinamic în funcție de slidesPerView
         let slidesPerView = 3;
         const breakpoints = this.params.breakpoints;
         const width = window.innerWidth;
 
         if (breakpoints) {
-          const keys = Object.keys(breakpoints).map(k => parseInt(k)).sort((a,b)=>a-b);
+          const keys = Object.keys(breakpoints).map(k => parseInt(k)).sort((a, b) => a - b);
           for (let i = 0; i < keys.length; i++) {
             if (width >= keys[i]) slidesPerView = breakpoints[keys[i]].slidesPerView;
           }
@@ -176,21 +175,28 @@ observer.observe(document.body, { attributes: true, attributeFilter: ['class'] }
   INIT CAROUSELS ON DOM CONTENT LOADED
 ========================*/
 document.addEventListener('DOMContentLoaded', function () {
+  // Home & Services folosesc funcția generică
   initSwiper('#home .mySwiper');
   initSwiper('#services .mySwiper');
-  initSwiper('#testimonials .mySwiper');
-});
-const testimonialsSwiper = new Swiper('#testimonials .mySwiper', {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: '.testimonials-button-next',
-    prevEl: '.testimonials-button-prev',
-  },
-  breakpoints: {
-    0: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  },
+
+  // Testimonials - configurat separat cu autoHeight
+  new Swiper('#testimonials .mySwiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoHeight: true, // ✅ important pentru mobil
+    navigation: {
+      nextEl: '.testimonials-button-next',
+      prevEl: '.testimonials-button-prev',
+    },
+    pagination: {
+      el: '#testimonials .swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
 });

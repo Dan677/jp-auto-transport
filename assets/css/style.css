@@ -914,7 +914,8 @@ body {
   padding: 25px;
   text-align: left;
   position: relative;
-  height: 100%; /* Asigură înălțime egală pentru carduri */
+  height: auto;        /* ✅ lasă cardul să crească după text */
+  min-height: 250px;   /* opțional, să nu fie prea mic pentru testimoniale scurte */
   display: flex;
   flex-direction: column;
 }
