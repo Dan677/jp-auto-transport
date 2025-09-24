@@ -1372,3 +1372,78 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   display: block;
   margin: 30px auto 0;
 }
+.footer {
+  padding: 20px 40px;
+  border-top: 2px solid var(--dark-neon-albastru);
+  box-shadow: 0 -2px 10px var(--dark-neon-albastru);
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: flex-end; /* logo în dreapta */
+  align-items: flex-start;   /* aliniază sus în loc de centrare */
+  min-height: 140px;
+}
+
+.footer-logo {
+  max-height: 180px; /* mai mare cu jumătate față de 120px */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.light-mode .footer {
+  border-color: var(--light-neon-menta);
+  box-shadow: 0 -2px 10px var(--light-neon-menta);
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* permite rearanjarea pe ecrane mici */
+}
+
+.footer-logo {
+  max-height: 200px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+/* ✅ Responsive: pe ecrane sub 768px, logo-ul trece sub text */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;      /* text deasupra, logo dedesubt */
+    align-items: center;         /* centrează tot pe orizontală */
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-top: 20px;            /* spațiu între text și logo */
+    max-height: 150px;           /* puțin mai mic pe mobil ca să încapă */
+  }
+}
+
+.footer-info {
+  flex: 1;
+  text-align: center; /* centrează textele */
+}
+
+.footer-contact {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; /* centrează icon-urile pe orizontală */
+  gap: 15px; /* spațiu între icon-uri */
+}
+
+.footer-text {
+  margin: 3px 0;
+  font-size: 0.95rem;
+  text-align: center; /* asigură centrare și pe paragrafe */
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  align-items: flex-start; /* logo sus, aliniat cu primul <p> */
+}

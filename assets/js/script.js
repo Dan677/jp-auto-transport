@@ -153,16 +153,28 @@ const initSwiper = (selector) => {
 };
 
 /*========================
-  ABOUT IMAGE THEME SWITCH
+  ABOUT & FOOTER LOGO THEME SWITCH
 ========================*/
 const aboutImg = document.getElementById('aboutImg');
+const footerLogo = document.getElementById('footerLogo');
 
 function updateImageForTheme() {
-  if (!aboutImg) return;
-  if (document.body.classList.contains('light-mode')) {
-    aboutImg.src = 'assets/images/About_us_light.png';
-  } else {
-    aboutImg.src = 'assets/images/About_us.png';
+  // Imagine About
+  if (aboutImg) {
+    if (document.body.classList.contains('light-mode')) {
+      aboutImg.src = 'assets/images/About_us_light.png';
+    } else {
+      aboutImg.src = 'assets/images/About_us.png';
+    }
+  }
+
+  // Logo Footer
+  if (footerLogo) {
+    if (document.body.classList.contains('light-mode')) {
+      footerLogo.src = 'assets/images/logo_light.png';
+    } else {
+      footerLogo.src = 'assets/images/logo_dark.png';
+    }
   }
 }
 
@@ -200,10 +212,15 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 });
- document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById("toggleBlogsBtn");
-    const extraBlogs = document.querySelectorAll(".extra-blog");
 
+/*========================
+  BLOGS LOAD MORE
+========================*/
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("toggleBlogsBtn");
+  const extraBlogs = document.querySelectorAll(".extra-blog");
+
+  if (toggleBtn) {
     toggleBtn.addEventListener("click", function () {
       if (toggleBtn.textContent === "Load More") {
         extraBlogs.forEach(el => el.style.display = "block");
@@ -214,4 +231,5 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("blogs").scrollIntoView({ behavior: "smooth" });
       }
     });
-  });
+  }
+});
