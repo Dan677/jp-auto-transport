@@ -2015,6 +2015,20 @@ input[type=number] {
     background-color: rgba(148, 0, 211, 0.2); /* mov transparent pe hover */
     color: #9400d3;                           /* text mov neon pe hover */
   }
+  /* ===== Light Mode ===== */
+  body.light-mode .navbar .dropdown-menu {
+    background-color: #fff;             /* fundal alb */
+    border: 2px solid #00c3ff;          /* albastru neon */
+  }
+
+  body.light-mode .navbar .dropdown-menu .dropdown-item {
+    color: #000;                        /* text negru */
+  }
+
+  body.light-mode .navbar .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(0, 195, 255, 0.15); /* albastru transparent pe hover */
+    color: #00c3ff;                            /* text albastru neon pe hover */
+  }
   /* =========================
      TEXT RESPONSIVE PE MOBIL
   ========================= */
