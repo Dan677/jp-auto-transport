@@ -1724,16 +1724,24 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   box-shadow: 0 0 15px var(--light-neon-menta), 0 0 30px var(--light-neon-menta);
 }
 
-/* Result styling */
 #priceResult {
   font-weight: bold;
-  color: var(--dark-neon-albastru);
-  text-shadow: 0 0 10px var(--dark-neon-albastru), 0 0 20px var(--dark-neon-albastru);
+  color: #fff; /* alb pe dark mode */
+  text-shadow:
+    0 0 5px var(--dark-neon-albastru),
+    0 0 10px var(--dark-neon-albastru),
+    0 0 20px var(--dark-neon-albastru),
+    0 0 30px var(--dark-neon-albastru);
 }
 
+/* Light mode – text negru + contur verde mentă neon */
 .light-mode #priceResult {
-  color: var(--light-neon-menta);
-  text-shadow: 0 0 10px var(--light-neon-menta), 0 0 20px var(--light-neon-menta);
+  color: #000; /* text negru */
+  text-shadow:
+    0 0 5px var(--light-neon-menta),
+    0 0 10px var(--light-neon-menta),
+    0 0 20px var(--light-neon-menta),
+    0 0 30px var(--light-neon-menta);
 }
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
