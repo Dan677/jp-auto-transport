@@ -595,19 +595,6 @@ body {
 .light-mode .carousel-control-next-icon::after {
   border-color: var(--light-neon-albastru);
 }
-#about {
-  border: 2px solid var(--dark-neon-mov);   /* mov neon pe dark */
-  box-shadow: 0 0 20px var(--dark-neon-mov);
-  padding: 60px 20px;
-  margin: 60px 0;
-  border-radius: 15px; /* colțuri rotunjite */
-}
-
-/* Light mode */
-.light-mode #about {
-  border: 2px solid var(--light-neon-menta);
-  box-shadow: 0 0 20px var(--light-neon-menta);
-}
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -1219,7 +1206,7 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   box-shadow: 0 0 20px var(--dark-neon-mov);
   padding: 60px 20px;
   margin: 60px 0;
-  border-radius: 0; /* full width ca restul secțiunilor */
+  border-radius: 15px; /* full width ca restul secțiunilor */
 }
 
 /* Light mode */
@@ -1513,7 +1500,7 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   margin: 60px 0;              /* separare de alte secțiuni */
   border: 2px solid var(--dark-neon-albastru);
   box-shadow: 0 0 20px var(--dark-neon-albastru);
-  border-radius: 0;            /* fără colțuri rotunjite → full width */
+  border-radius: 15px;            /* fără colțuri rotunjite → full width */
   text-align: center;
 }
 
