@@ -2128,3 +2128,37 @@ body.light-mode .footer-icon:hover {
   color: #000; /* negru pe hover */
   text-shadow: 0 0 10px #00c3ff;
 }
+.testimonial-social {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.testimonial-social a {
+  color: #9400d3; /* mov neon implicit (dark mode) */
+  font-size: 1.2rem;
+  margin: 0 8px;
+  transition: all 0.2s ease;
+}
+
+.testimonial-social a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #9400d3;
+}
+
+/* Light mode */
+body.light-mode .testimonial-social a {
+  color: #00c3ff; /* albastru neon in light mode */
+}
+
+body.light-mode .testimonial-social a:hover {
+  color: #000;
+  text-shadow: 0 0 10px #00c3ff;
+}
+body.light-mode {
+  background-color: #f5f5f5; /* alb murdar */
+  color: #000;
+}
+
+body.light-mode .section {
+  background-color: #f9f9f9; /* ușor diferit pt secțiuni */
+}
