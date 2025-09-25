@@ -1958,3 +1958,6 @@ input[type=number] {
           display: block;
       }
   }
+  body {
+     overflow-x: hidden;  /* Blochează scroll-ul orizontal */
+  }
