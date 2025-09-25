@@ -2120,3 +2120,11 @@ body.light-mode .swiper-pagination-bullet-active {
   background: #00c3ff; /* albastru neon activ */
   opacity: 1;
 }
+body.light-mode .footer-icon {
+  color: #00c3ff; /* albastru neon */
+}
+
+body.light-mode .footer-icon:hover {
+  color: #000; /* negru pe hover */
+  text-shadow: 0 0 10px #00c3ff;
+}
