@@ -1687,3 +1687,90 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   border-color: var(--light-neon-menta);
   box-shadow: 0 0 12px var(--light-neon-menta);
 }
+/* Neon input styling */
+.neon-input {
+  background: transparent;
+  color: var(--dark-text);
+  border: 2px solid var(--dark-neon-mov);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px var(--dark-neon-mov), 0 0 20px var(--dark-neon-mov);
+  transition: all 0.3s ease;
+}
+
+/* Dropdown fix */
+.neon-input option {
+  background-color: #000;   /* fundal închis pe dark */
+  color: #fff;              /* text vizibil */
+}
+.light-mode .neon-input option {
+  background-color: #fff;   /* fundal alb pe light */
+  color: #000;              /* text negru */
+}
+
+.neon-input:focus {
+  outline: none;
+  box-shadow: 0 0 15px var(--dark-neon-mov), 0 0 30px var(--dark-neon-mov);
+}
+
+/* Light mode */
+.light-mode .neon-input {
+  color: var(--light-text);
+  border: 2px solid var(--light-neon-menta);
+  box-shadow: 0 0 10px var(--light-neon-menta), 0 0 20px var(--light-neon-menta);
+}
+
+.light-mode .neon-input:focus {
+  box-shadow: 0 0 15px var(--light-neon-menta), 0 0 30px var(--light-neon-menta);
+}
+
+/* Result styling */
+#priceResult {
+  font-weight: bold;
+  color: var(--dark-neon-albastru);
+  text-shadow: 0 0 10px var(--dark-neon-albastru), 0 0 20px var(--dark-neon-albastru);
+}
+
+.light-mode #priceResult {
+  color: var(--light-neon-menta);
+  text-shadow: 0 0 10px var(--light-neon-menta), 0 0 20px var(--light-neon-menta);
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Elimină săgețile de la input number (Firefox) */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+#price-calculator .form-label {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+#price-calculator .form-control,
+#price-calculator .form-select {
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* Pe mobile: câmpurile unul sub altul */
+@media (max-width: 768px) {
+  #price-calculator .row.g-3 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #price-calculator .col-md-4 {
+    width: 100%;
+  }
+
+  #price-calculator button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+  }
+}

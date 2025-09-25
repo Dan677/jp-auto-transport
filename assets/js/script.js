@@ -249,3 +249,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+/*========================
+  PRICE CALCULATOR
+========================*/
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("calculatorForm");
+  const result = document.getElementById("priceResult");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const carType = document.getElementById("carType").value;
+      const distance = parseFloat(document.getElementById("distance").value);
+      const condition = document.getElementById("condition").value;
+
+      if (isNaN(distance) || distance <= 0) {
+        result.textContent = "⚠️ Please enter a valid distance.";
+        return;
+      }
+
+      // Base rate
+      let ratePerMile = carType === "suv" ? 1.2 : 1.0;
+      let basePrice = distance * ratePerMile;
+
+      // Extra cost for non-functional
+      if (condition === "non-functional") {
+        basePrice *= 1.2; // +20%
+      }
+
+      result.textContent = `Estimated Price: $${basePrice.toFixed(2)}`;
+    });
+  }
+});
