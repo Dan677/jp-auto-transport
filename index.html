@@ -711,6 +711,106 @@
     </div>
   </div>
 </section>
+
+<section id="fleet" class="section section-albastru">
+  <div class="container">
+    <h2><span class="neon-mov">Our</span> <span class="neon-albastru">Fleet</span></h2>
+    <p>Modern and reliable vehicles for safe transport.</p>
+
+    <div class="fleet-container">
+
+      <div class="fleet-item">
+        <div class="fleet-image">
+          <img src="assets/images/open_carrier1.jpg" alt="Open Car Carrier">
+        </div>
+        <div class="fleet-content">
+          <h3 class="fleet-title">Open Car Carrier</h3>
+          <p class="fleet-description">
+            Our Open Rack vehicle transporters are reserved exclusively for our corporate customers seeking a cost-effective transport solution for engineering vehicles, test vehicles, and large-scale manufacturing events.
+          </p>
+          <div class="fleet-capacity">
+            <div class="capacity-item">
+              <span class="capacity-number">9</span>
+              <p>Up to nine <br> average sedans</p>
+            </div>
+            <div class="capacity-item">
+              <span class="capacity-number">7</span>
+              <p>Up to seven <br> average SUVs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fleet-item">
+        <div class="fleet-image">
+          <img src="assets/images/open_carrier2.jpg" alt="Open Car Carrier">
+        </div>
+        <div class="fleet-content">
+          <h3 class="fleet-title">Open Car Carrier</h3>
+          <p class="fleet-description">
+            Ideal for dealerships and auction houses, this carrier offers a high-capacity, efficient solution for moving multiple vehicles at once, ensuring timely delivery for your inventory.
+          </p>
+          <div class="fleet-capacity">
+            <div class="capacity-item">
+              <span class="capacity-number">9</span>
+              <p>Up to nine <br> average sedans</p>
+            </div>
+            <div class="capacity-item">
+              <span class="capacity-number">7</span>
+              <p>Up to seven <br> average SUVs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fleet-item">
+        <div class="fleet-image">
+          <img src="assets/images/open_carrier3.jpg" alt="Open Car Carrier">
+        </div>
+        <div class="fleet-content">
+          <h3 class="fleet-title">Open Car Carrier</h3>
+          <p class="fleet-description">
+            A versatile transporter for both long-haul and regional routes. Its robust design provides a secure and reliable journey for every vehicle, from family cars to light commercial trucks.
+          </p>
+          <div class="fleet-capacity">
+            <div class="capacity-item">
+              <span class="capacity-number">9</span>
+              <p>Up to nine <br> average sedans</p>
+            </div>
+            <div class="capacity-item">
+              <span class="capacity-number">7</span>
+              <p>Up to seven <br> average SUVs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fleet-item">
+        <div class="fleet-image">
+          <img src="assets/images/pickup_truck.jpg" alt="Normal Pick Up Truck">
+        </div>
+        <div class="fleet-content">
+          <h3 class="fleet-title">Normal Pick Up Truck</h3>
+          <p class="fleet-description">
+            Perfect for single vehicle transport, local deliveries, or hard-to-reach areas. This option provides flexibility and speed for urgent or specialized transport needs.
+          </p>
+          <div class="fleet-capacity">
+            <div class="capacity-item">
+              <span class="capacity-number">2</span>
+              <p>Up to two <br> average sedans</p>
+            </div>
+            <div class="capacity-item">
+              <span class="capacity-number">1</span>
+              <p>One <br> average SUV</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section id="pricing-factors" class="section">
   <div class="container">
     <h2><span class="neon-mov">How Much Does</span> <span class="neon-albastru">Car Shipping Cost?</span></h2>
@@ -763,27 +863,18 @@
     <h2><span class="neon-mov">Estimated</span> <span class="neon-albastru">Price</span></h2>
     <form id="calculatorForm" class="row g-3 justify-content-center">
 
-      <!-- Car Type (dropdown) -->
-      <div class="col-md-4">
-        <label for="carType" class="form-label">Car Type</label>
-        <select id="carType" class="form-select neon-input">
-          <option value="suv">SUV</option>
-          <option value="sedan">Sedan</option>
-        </select>
-      </div>
-
-      <!-- Distance (NUMERIC, fără dropdown!) -->
+      <!-- Distance (NUMERIC) -->
       <div class="col-md-4">
         <label for="distance" class="form-label">Distance (miles)</label>
         <input type="number" id="distance" class="form-control neon-input" placeholder="Enter distance" required>
       </div>
 
-      <!-- Condition (dropdown) -->
+      <!-- Transport Type (dropdown) -->
       <div class="col-md-4">
-        <label for="condition" class="form-label">Condition</label>
-        <select id="condition" class="form-select neon-input">
-          <option value="functional">Functional</option>
-          <option value="non-functional">Non-Functional</option>
+        <label for="transportType" class="form-label">Transport Type</label>
+        <select id="transportType" class="form-select neon-input">
+          <option value="open-carrier">Open Carrier</option>
+          <option value="pickup-truck">Normal Pick Up Truck</option>
         </select>
       </div>
 

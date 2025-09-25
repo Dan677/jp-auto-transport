@@ -260,25 +260,25 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const carType = document.getElementById("carType").value;
       const distance = parseFloat(document.getElementById("distance").value);
-      const condition = document.getElementById("condition").value;
+      const transportType = document.getElementById("transportType").value;
 
       if (isNaN(distance) || distance <= 0) {
         result.textContent = "⚠️ Please enter a valid distance.";
         return;
       }
 
-      // Base rate
-      let ratePerMile = carType === "suv" ? 1.2 : 1.0;
-      let basePrice = distance * ratePerMile;
-
-      // Extra cost for non-functional
-      if (condition === "non-functional") {
-        basePrice *= 1.2; // +20%
+      // Tarife per mile în funcție de tipul transportului
+      let ratePerMile = 0;
+      if (transportType === "open-carrier") {
+        ratePerMile = 1.0;
+      } else if (transportType === "pickup-truck") {
+        ratePerMile = 1.5;
       }
 
-      result.textContent = `Estimated Price: $${basePrice.toFixed(2)}`;
+      const totalPrice = distance * ratePerMile;
+
+      result.textContent = `Estimated Price: $${totalPrice.toFixed(2)}`;
     });
   }
 });
