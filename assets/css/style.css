@@ -491,7 +491,19 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
+#gallery {
+  border: 2px solid var(--dark-neon-mov);   /* mov neon pe dark */
+  box-shadow: 0 0 20px var(--dark-neon-mov);
+  padding: 60px 20px;
+  margin: 60px 0;
+  border-radius: 15px; /* colțuri rotunjite */
+}
 
+/* Light mode */
+.light-mode #gallery {
+  border: 2px solid var(--light-neon-menta);
+  box-shadow: 0 0 20px var(--light-neon-menta);
+}
 .gallery-info p {
   margin-bottom: 10px;
   color: var(--dark-neon-mov);
@@ -583,7 +595,19 @@ body {
 .light-mode .carousel-control-next-icon::after {
   border-color: var(--light-neon-albastru);
 }
+#about {
+  border: 2px solid var(--dark-neon-mov);   /* mov neon pe dark */
+  box-shadow: 0 0 20px var(--dark-neon-mov);
+  padding: 60px 20px;
+  margin: 60px 0;
+  border-radius: 15px; /* colțuri rotunjite */
+}
 
+/* Light mode */
+.light-mode #about {
+  border: 2px solid var(--light-neon-menta);
+  box-shadow: 0 0 20px var(--light-neon-menta);
+}
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -595,7 +619,6 @@ body {
   margin: 0 auto;
   text-align: left;
 }
-
 /* imaginea ocupă doar cât îi trebuie */
 .about-image img {
   max-width: 500px;
@@ -866,7 +889,19 @@ body {
 .services .mySwiper .swiper-button-next::after {
   display: none;
 }
+#services {
+  border: 2px solid var(--dark-neon-albastru);   /* albastru neon pe dark */
+  box-shadow: 0 0 20px var(--dark-neon-albastru);
+  padding: 60px 20px;
+  margin: 60px 0;
+  border-radius: 15px; /* colțuri rotunjite ca la celelalte */
+}
 
+/* Light mode */
+.light-mode #services {
+  border: 2px solid var(--light-neon-menta);
+  box-shadow: 0 0 20px var(--light-neon-menta);
+}
 /* Repoziționare săgeți sub slider */
 .services .mySwiper .swiper-button-prev,
 .services .mySwiper .swiper-button-next {
@@ -1179,7 +1214,19 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   transition: all 0.3s ease;
   text-shadow: 0 0 8px #b026ff;
 }
+#why-choose-us {
+  border: 2px solid var(--dark-neon-mov); /* mov neon */
+  box-shadow: 0 0 20px var(--dark-neon-mov);
+  padding: 60px 20px;
+  margin: 60px 0;
+  border-radius: 0; /* full width ca restul secțiunilor */
+}
 
+/* Light mode */
+.light-mode #why-choose-us {
+  border: 2px solid var(--light-neon-menta);
+  box-shadow: 0 0 20px var(--light-neon-menta);
+}
 .footer-icon:hover {
   color: #00f0ff; /* albastru electric neon */
   text-shadow: 0 0 12px #00f0ff, 0 0 24px #00f0ff;
@@ -1232,7 +1279,7 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
 
 .real-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px var(--dark-neon-mov), 0 0 40px var(--dark-neon-mov);
+  box-shadow: 0 0 20px var(--dark-neon-albastru), 0 0 40px var(--dark-neon-albastru); /* schimbat pe albastru neon */
 }
 
 .light-mode .real-card {
@@ -1252,7 +1299,19 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   justify-content: center;
   height: 100%;
 }
+#reals {
+  border: 2px solid var(--dark-neon-albastru);   /* albastru neon pe dark */
+  box-shadow: 0 0 20px var(--dark-neon-albastru);
+  padding: 60px 20px;
+  margin: 60px 0;
+  border-radius: 15px; /* ✨ rotunjire colțuri ca la blogs */
+}
 
+/* Light mode */
+.light-mode #reals {
+  border: 2px solid var(--light-neon-menta);
+  box-shadow: 0 0 20px var(--light-neon-menta);
+}
 .real-video {
   width: 100%;
   height: 350px;         /* toate vor avea aceeași înălțime */
@@ -1446,4 +1505,74 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
 .footer-logo-wrapper {
   display: flex;
   align-items: flex-start; /* logo sus, aliniat cu primul <p> */
+}
+/* ===================== PRICING FACTORS ===================== */
+#pricing-factors {
+  width: 100%;                 /* ocupă toată lățimea ecranului */
+  padding: 80px 20px;          /* spațiu interior mai mare */
+  margin: 60px 0;              /* separare de alte secțiuni */
+  border: 2px solid var(--dark-neon-albastru);
+  box-shadow: 0 0 20px var(--dark-neon-albastru);
+  border-radius: 0;            /* fără colțuri rotunjite → full width */
+  text-align: center;
+}
+
+.light-mode #pricing-factors {
+  border: 2px solid var(--light-neon-menta);
+  box-shadow: 0 0 20px var(--light-neon-menta);
+}
+
+#pricing-factors .section-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#pricing-factors .section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.factor-card {
+  background: rgba(255, 255, 255, 0.05); /* transparent pt dark */
+  border: 2px solid var(--dark-neon-albastru);
+  border-radius: 12px;
+  padding: 25px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.factor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--dark-neon-albastru);
+}
+
+.light-mode .factor-card {
+  border: 2px solid var(--light-neon-menta);
+}
+
+.factor-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--dark-neon-albastru);
+}
+
+.light-mode .factor-icon {
+  color: var(--light-neon-menta);
+}
+
+.factor-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.factor-text {
+  font-size: 0.95rem;
+  opacity: 0.9;
 }
