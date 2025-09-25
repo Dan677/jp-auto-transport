@@ -1920,3 +1920,9 @@ input[type=number] {
     justify-content: center;
   }
 }
+@media (min-width: 992px) {
+  .navbar-nav {
+    flex-wrap: wrap;     /* permite trecerea pe rândul 2 */
+    justify-content: center; /* opțional, centrează */
+  }
+}
