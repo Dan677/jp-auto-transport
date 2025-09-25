@@ -1661,7 +1661,11 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
 .states-swiper {
   padding-bottom: 50px;
 }
-
+ @media (min-width: 1024px) {
+    .states-swiper {
+      overflow: hidden; /* nu lasă să se vadă bucăți din cardurile laterale */
+    }
+  }
 .state-card {
   background: rgba(0, 0, 0, 0.6);
   border: 2px solid var(--dark-neon-albastru);
@@ -1960,4 +1964,34 @@ input[type=number] {
   }
   body {
      overflow-x: hidden;  /* Blochează scroll-ul orizontal */
+  }
+  /* ===== PREVENIRE SCROLL ORIZONTAL ===== */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ===== SLIDER GENERAL ===== */
+  .mySwiper {
+    overflow: hidden; /* ascunde cardurile care ies în afară */
+  }
+
+  /* ===== STATES/ZONES: pe desktop fără preview ===== */
+
+  /* ===== SĂGEȚI: rămân vizibile dar nu ies din container ===== */
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .swiper-button-prev {
+    left: 10px; /* sigur în interior */
+  }
+
+  .swiper-button-next {
+    right: 10px; /* sigur în interior */
   }

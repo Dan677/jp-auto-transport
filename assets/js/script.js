@@ -106,46 +106,27 @@ if (navbarToggler) {
 }
 
 /*========================
-  SWIPER CAROUSEL
+  SWIPER CAROUSEL (generic)
 ========================*/
 const initSwiper = (selector) => {
   const container = document.querySelector(selector);
   if (!container) return;
 
-  const slidesCount = container.querySelectorAll('.swiper-slide').length;
-
   const swiper = new Swiper(selector, {
-    slidesPerView: 3,
-    spaceBetween: 30,
     loop: true,
-    pagination: {
-      el: selector + " .swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        let slidesPerView = 3;
-        const breakpoints = this.params.breakpoints;
-        const width = window.innerWidth;
-
-        if (breakpoints) {
-          const keys = Object.keys(breakpoints).map(k => parseInt(k)).sort((a, b) => a - b);
-          for (let i = 0; i < keys.length; i++) {
-            if (width >= keys[i]) slidesPerView = breakpoints[keys[i]].slidesPerView;
-          }
-        }
-
-        const bulletsCount = Math.max(slidesCount - (slidesPerView - 1), 1);
-        if (index < bulletsCount) return `<span class="${className}"></span>`;
-        return '';
-      }
-    },
+    spaceBetween: 30,
     navigation: {
       nextEl: selector + " .swiper-button-next",
       prevEl: selector + " .swiper-button-prev",
     },
+    pagination: {
+      el: selector + " .swiper-pagination",
+      clickable: true,
+    },
     breakpoints: {
-      0: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
+      0: { slidesPerView: 1.2, centeredSlides: true },   // 📱 mobil
+      768: { slidesPerView: 2, centeredSlides: false },  // tabletă
+      1024: { slidesPerView: 3, centeredSlides: false }  // 💻 desktop
     },
   });
 
@@ -159,7 +140,6 @@ const aboutImg = document.getElementById('aboutImg');
 const footerLogo = document.getElementById('footerLogo');
 
 function updateImageForTheme() {
-  // Imagine About
   if (aboutImg) {
     if (document.body.classList.contains('light-mode')) {
       aboutImg.src = 'assets/images/About_us_light.png';
@@ -168,7 +148,6 @@ function updateImageForTheme() {
     }
   }
 
-  // Logo Footer
   if (footerLogo) {
     if (document.body.classList.contains('light-mode')) {
       footerLogo.src = 'assets/images/logo_light.png';
@@ -191,24 +170,42 @@ document.addEventListener('DOMContentLoaded', function () {
   initSwiper('#home .mySwiper');
   initSwiper('#services .mySwiper');
 
-  // Testimonials - configurat separat cu autoHeight
+  // Testimonials
   new Swiper('#testimonials .mySwiper', {
-    slidesPerView: 3,
-    spaceBetween: 30,
     loop: true,
-    autoHeight: true, // ✅ important pentru mobil
+    spaceBetween: 30,
+    autoHeight: true,
     navigation: {
-      nextEl: '.testimonials-button-next',
-      prevEl: '.testimonials-button-prev',
+      nextEl: '#testimonials .swiper-button-next',
+      prevEl: '#testimonials .swiper-button-prev',
     },
     pagination: {
       el: '#testimonials .swiper-pagination',
       clickable: true,
     },
     breakpoints: {
-      0: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
+      0: { slidesPerView: 1.2, centeredSlides: true },
+      768: { slidesPerView: 2, centeredSlides: false },
+      1024: { slidesPerView: 3, centeredSlides: false }
+    },
+  });
+
+  // States/Zones
+  new Swiper('.states-swiper', {
+    loop: true,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.states-swiper .swiper-button-next',
+      prevEl: '.states-swiper .swiper-button-prev',
+    },
+    pagination: {
+      el: '.states-swiper .swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      0: { slidesPerView: 1.2, centeredSlides: true },
+      768: { slidesPerView: 2, centeredSlides: false },
+      1024: { slidesPerView: 3, centeredSlides: false }
     },
   });
 });
@@ -233,22 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-document.addEventListener('DOMContentLoaded', function () {
-  new Swiper('.states-swiper', {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-      nextEl: '.states-swiper .swiper-button-next',
-      prevEl: '.states-swiper .swiper-button-prev',
-    },
-    breakpoints: {
-      0: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-    }
-  });
-});
+
 /*========================
   PRICE CALCULATOR
 ========================*/
@@ -268,7 +250,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      // Tarife per mile în funcție de tipul transportului
       let ratePerMile = 0;
       if (transportType === "open-carrier") {
         ratePerMile = 1.0;
@@ -277,7 +258,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const totalPrice = distance * ratePerMile;
-
       result.textContent = `Estimated Price: $${totalPrice.toFixed(2)}`;
     });
   }
