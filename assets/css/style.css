@@ -1926,3 +1926,35 @@ input[type=number] {
     justify-content: center; /* opțional, centrează */
   }
 }
+@media (max-width: 768px) {  /* Doar pe tablete/mobile */
+      .burger-menu {  /* Înlocuiește cu clasa ta reală pentru panou, ex: .nav-drawer */
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 80%;  /* Lățime rezonabilă pe mobile */
+          height: 100vh;  /* Înălțime full screen */
+          background-color: #000;  /* Negru, ca în screenshot */
+          overflow-y: auto;  /* Scroll vertical dacă depășește */
+          overflow-x: hidden;  /* Fără scroll orizontal */
+          z-index: 1000;
+          padding: 20px 0;  /* Spațiu sus/jos */
+          box-shadow: 2px 0 10px rgba(0,0,0,0.5);  /* Umbră pentru vizibilitate */
+      }
+      .burger-menu ul {  /* Lista de link-uri */
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;  /* Stivă verticală */
+      }
+      .burger-menu li {  /* Fiecare item */
+          padding: 15px 20px;  /* Spațiu mai mic pentru a încadra mai multe */
+          border-bottom: 1px solid #333;  /* Linie separatoare */
+          font-size: 16px;  /* Text mai mic dacă e nevoie */
+      }
+      .burger-menu a {  /* Link-urile */
+          color: #fff;
+          text-decoration: none;
+          display: block;
+      }
+  }
