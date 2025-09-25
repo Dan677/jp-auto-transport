@@ -2098,3 +2098,25 @@ input[type=number] {
     word-break: keep-all;    /* păstrează cuvintele întregi */
   }
 }
+/* ===== Stil implicit (Dark Mode) ===== */
+.swiper-pagination-bullet {
+  background: #9400d3; /* mov neon */
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #9400d3; /* mov neon activ */
+  opacity: 1;
+}
+
+/* ===== Light Mode ===== */
+body.light-mode .swiper-pagination-bullet {
+  background: #00c3ff; /* albastru neon */
+  opacity: 0.7;
+}
+
+body.light-mode .swiper-pagination-bullet-active {
+  background: #00c3ff; /* albastru neon activ */
+  opacity: 1;
+}
