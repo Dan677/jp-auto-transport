@@ -92,18 +92,20 @@ if (closeMenuBtn) {
   });
 }
 
-const navLinksMobile = document.querySelectorAll('.navbar-nav .nav-link');
+const navLinksMobile = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
 navLinksMobile.forEach(link => {
   link.addEventListener('click', () => {
     new bootstrap.Collapse(navbarCollapse).hide();
   });
 });
 
-if (navbarToggler) {
-  navbarToggler.addEventListener('click', () => {
-    navbarToggler.classList.toggle('collapsed');
+// Linkurile din dropdown Others
+const dropdownItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
+dropdownItems.forEach(item => {
+  item.addEventListener('click', () => {
+    new bootstrap.Collapse(navbarCollapse).hide();
   });
-}
+});
 
 /*========================
   SWIPER CAROUSEL (generic)

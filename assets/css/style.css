@@ -1995,3 +1995,23 @@ input[type=number] {
   .swiper-button-next {
     right: 10px; /* sigur în interior */
   }
+  /* Stilizare meniu Others */
+  .navbar .dropdown-menu {
+    background-color: #000;             /* fundal negru */
+    border: 2px solid #9400d3;          /* mov neon */
+    border-radius: 8px;
+    padding: 0.5rem 0;
+  }
+
+  /* Linkurile din dropdown */
+  .navbar .dropdown-menu .dropdown-item {
+    color: #fff;                        /* text alb */
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  /* Hover efect pe linkuri */
+  .navbar .dropdown-menu .dropdown-item:hover {
+    background-color: rgba(148, 0, 211, 0.2); /* mov transparent pe hover */
+    color: #9400d3;                           /* text mov neon pe hover */
+  }
