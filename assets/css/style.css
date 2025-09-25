@@ -2067,3 +2067,20 @@ input[type=number] {
       font-size: 0.9rem;
     }
   }
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    word-wrap: break-word;    /* rupe DOAR cuvintele lungi */
+    overflow-wrap: break-word;
+    white-space: normal;      /* permite trecerea pe rând nou */
+    text-align: center;
+  }
+
+  /* Titluri neon - nu se sparg pe litere */
+  .neon-mov,
+  .neon-albastru {
+    display: block;
+    max-width: 100%;
+    white-space: normal;     /* lasă să treacă pe rând nou */
+    word-break: keep-all;    /* păstrează cuvintele întregi */
+  }
+}
