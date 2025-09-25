@@ -2154,3 +2154,7 @@ body.light-mode .testimonial-social a:hover {
   color: #000;
   text-shadow: 0 0 10px #00c3ff;
 }
+body.light-mode .neon-icon {
+  color: #00c3ff; /* albastru neon */
+  text-shadow: 0 0 5px #00c3ff, 0 0 10px #00c3ff;
+}
