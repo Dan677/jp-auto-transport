@@ -233,3 +233,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+document.addEventListener('DOMContentLoaded', function () {
+  new Swiper('.states-swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.states-swiper .swiper-button-next',
+      prevEl: '.states-swiper .swiper-button-prev',
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    }
+  });
+});
