@@ -1689,8 +1689,8 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
 }
 /* Neon input styling */
 .neon-input {
-  background: transparent;
-  color: var(--dark-text);
+  background-color: #000; /* fundal negru */
+  color: #fff;            /* text alb */
   border: 2px solid var(--dark-neon-mov);
   border-radius: 8px;
   padding: 10px;
@@ -1698,29 +1698,58 @@ body.light-mode .testimonial-navigation .swiper-button-next:hover {
   transition: all 0.3s ease;
 }
 
-/* Dropdown fix */
-.neon-input option {
-  background-color: #000;   /* fundal închis pe dark */
-  color: #fff;              /* text vizibil */
-}
-.light-mode .neon-input option {
-  background-color: #fff;   /* fundal alb pe light */
-  color: #000;              /* text negru */
-}
-
+/* Focus */
 .neon-input:focus {
   outline: none;
   box-shadow: 0 0 15px var(--dark-neon-mov), 0 0 30px var(--dark-neon-mov);
 }
 
+/* Dropdown fix */
+.neon-input option {
+  background-color: #000;
+  color: #fff;
+}
+
 /* Light mode */
 .light-mode .neon-input {
-  color: var(--light-text);
+  background-color: #fff; /* aici fundal alb pe light */
+  color: #000;
   border: 2px solid var(--light-neon-menta);
   box-shadow: 0 0 10px var(--light-neon-menta), 0 0 20px var(--light-neon-menta);
 }
 
 .light-mode .neon-input:focus {
+  box-shadow: 0 0 15px var(--light-neon-menta), 0 0 30px var(--light-neon-menta);
+}
+/* Forțează stilul neon pe toate input-urile și select-urile */
+input.neon-input,
+select.neon-input {
+  background-color: #000 !important; /* fundal negru */
+  color: #fff !important;           /* text alb */
+  border: 2px solid var(--dark-neon-mov);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px var(--dark-neon-mov), 0 0 20px var(--dark-neon-mov);
+  transition: all 0.3s ease;
+}
+
+input.neon-input:focus,
+select.neon-input:focus {
+  outline: none;
+  box-shadow: 0 0 15px var(--dark-neon-mov), 0 0 30px var(--dark-neon-mov);
+}
+
+/* Light mode */
+.light-mode input.neon-input,
+.light-mode select.neon-input {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 2px solid var(--light-neon-menta);
+  box-shadow: 0 0 10px var(--light-neon-menta), 0 0 20px var(--light-neon-menta);
+}
+
+.light-mode input.neon-input:focus,
+.light-mode select.neon-input:focus {
   box-shadow: 0 0 15px var(--light-neon-menta), 0 0 30px var(--light-neon-menta);
 }
 
