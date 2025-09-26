@@ -2516,3 +2516,58 @@ body.light-mode .fleet-item:hover {
   .section h1 { font-size: 3rem !important; }
   .section h2 { font-size: 2.5rem !important; }
 }
+.light-mode .custom-tooltip {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--light-neon-menta);
+  box-shadow: 0 0 8px var(--light-neon-menta), 0 0 16px var(--light-neon-menta);
+  color: var(--light-text);
+}
+
+.light-mode .tooltip-icon {
+  box-shadow: 0 0 6px var(--light-neon-albastru);
+}
+/* ---------- TEAM NAME 3D + NEON ---------- */
+.team-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Dark mode */
+body:not(.light-mode) .team-name {
+  color: #fff;
+  text-shadow:
+    0 0 4px #00f0ff,
+    0 0 8px #00e0ff,
+    0 0 12px #00d0ff,
+    1px 1px 0 #0ff,
+    2px 2px 0 #0dd,
+    3px 3px 0 #0aa;
+}
+
+/* Light mode */
+body.light-mode .team-name {
+  color: #111;
+  text-shadow:
+    0 0 3px #00bfff,
+    0 0 6px #00cfff,
+    0 0 10px #00dfff,
+    1px 1px 0 #0cf,
+    2px 2px 0 #09c,
+    3px 3px 0 #069;
+}
+
+/* Hover effect (same for both modes) */
+.team-name:hover {
+  transform: translateY(-3px);
+  text-shadow:
+    0 0 6px #00faff,
+    0 0 12px #00f0ff,
+    0 0 18px #00e0ff,
+    2px 2px 0 #0ff,
+    3px 3px 0 #0dd,
+    4px 4px 0 #0aa;
+}
