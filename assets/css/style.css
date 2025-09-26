@@ -2471,16 +2471,48 @@ body.light-mode .fleet-item:hover {
     line-height: 1.25;
   }
 }
+/* ================= MOBILE FIXES ================= */
 @media (max-width: 768px) {
   .section {
-    padding: 70px 15px;   /* mai mic sus și jos */
-    margin: 30px 0;
+    padding: 50px 15px !important;
+    margin: 25px 0 !important;
+  }
+
+  #services,
+  #gallery,
+  #blogs,
+  #testimonials,
+  #faq,
+  #fleet,
+  #price-calculator {
+    padding: 40px 15px !important;
+    margin: 25px 0 !important;
+  }
+
+  .home-section {
+    padding: 70px 15px !important;
+    background-attachment: scroll !important;
+  }
+
+  .section h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .section h2 {
+    font-size: 3rem !important;
+    line-height: 1.2;
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .section {
-    padding: 50px 12px;   /* și mai mic pe telefoane foarte mici */
-    margin: 20px 0;
+    padding: 35px 12px !important;
+    margin: 18px 0 !important;
   }
+
+  .section h1 { font-size: 3rem !important; }
+  .section h2 { font-size: 2.5rem !important; }
 }
