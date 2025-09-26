@@ -2408,3 +2408,42 @@ body.light-mode .fleet-item {
 body.light-mode .fleet-item:hover {
   box-shadow: 0 0 25px #00c3ff, 0 0 45px rgba(0, 195, 255, 0.8);
 }
+.team-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-tooltip {
+  display: none;
+  position: absolute;
+  top: 100%; /* sub poză */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.95);
+  color: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  border: 3px solid #9400d3; /* mov neon */
+  box-shadow: 0 0 20px #9400d3;
+  z-index: 1000;
+  text-align: center;
+  width: 480px; /* mai lat */
+  min-height: 160px;
+}
+
+.custom-tooltip p {
+  margin: 10px 0;
+  font-size: 16px; /* text mai mare */
+  font-weight: 500;
+}
+
+.tooltip-icon {
+  height: 50px; /* iconuri mai mari */
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* Tooltip vizibil la hover */
+.team-img-wrapper:hover .custom-tooltip {
+  display: block;
+}

@@ -284,3 +284,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+function toggleTooltip(wrapper) {
+  const tooltip = wrapper.querySelector(".custom-tooltip");
+  const isVisible = tooltip.style.display === "block";
+
+  // ascunde toate tooltip-urile
+  document.querySelectorAll(".custom-tooltip").forEach(el => el.style.display = "none");
+
+  // afișează doar pe cel click-uit
+  if (!isVisible) {
+    tooltip.style.display = "block";
+  }
+}
+
+// ascunde tooltip dacă faci click pe altundeva
+document.addEventListener("click", function(event) {
+  if (!event.target.closest(".team-img-wrapper")) {
+    document.querySelectorAll(".custom-tooltip").forEach(el => el.style.display = "none");
+  }
+});
