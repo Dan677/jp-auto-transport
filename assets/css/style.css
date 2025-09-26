@@ -2571,111 +2571,12 @@ body.light-mode .team-name {
     3px 3px 0 #0dd,
     4px 4px 0 #0aa;
 }
-/* HOME – stânga → dreapta */
-:root {
-  --cortina-color: #d9d9d9; /* gri deschis pentru light mode */
+.wave-letter {
+  display: inline-block;
+  animation: waveLetter 1.5s infinite ease-in-out;
 }
 
-body.dark-mode {
-  --cortina-color: #1e1e1e; /* gri închis pentru dark mode */
+@keyframes waveLetter {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
 }
-
-/* ===== EFECTE ===== */
-
-/* 1. Stânga → dreapta */
-#home, #faq, #fleet, #states, #reals {
-  position: relative;
-  overflow: hidden;
-}
-#home::before, #faq::before, #fleet::before, #states::before, #reals::before  {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--cortina-color);
-  transform: translateX(0);
-  transition: transform 1s ease-in-out;
-  z-index: 2;
-}
-#home.revealed::before,
-#faq.revealed::before,
-#fleet.revealed::before,
-#reals.revealed::before,
-#states.revealed::before {
-  transform: translateX(-100%);
-}
-
-/* 2. Dreapta → stânga */
-#services, #blogs, #team, #pricing-factors, #contact {
-  position: relative;
-  overflow: hidden;
-}
-#services::before, #blogs::before, #team::before, #pricing-factors::before, #contact::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--cortina-color);
-  transform: translateX(0);
-  transition: transform 1s ease-in-out;
-  z-index: 2;
-}
-#services.revealed::before,
-#blogs.revealed::before,
-#team.revealed::before,
-#pricing-factors.revealed::before,
-#contact.revealed::before {
-  transform: translateX(100%);
-}
-
-/* 3. Cortină din mijloc (stânga + dreapta) */
-#about, #testimonials, #why-choose-us, #gallery {
-  position: relative;
-  overflow: hidden;
-}
-#about::before, #about::after,
-#testimonials::before, #testimonials::after,
-#why-choose-us::before, #why-choose-us::after,
-#gallery::before, #gallery::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background: var(--cortina-color);
-  z-index: 2;
-  transition: transform 1s ease-in-out;
-}
-#about::before, #testimonials::before, #why-choose-us::before, #gallery::before {
-  left: 0;
-  transform: translateX(0);
-}
-#about::after, #testimonials::after, #why-choose-us::after, #gallery::after {
-  right: 0;
-  transform: translateX(0);
-}
-#about.revealed::before, #testimonials.revealed::before, #why-choose-us.revealed::before, #gallery.revealed::before {
-  transform: translateX(-100%);
-}
-#about.revealed::after, #testimonials.revealed::after, #why-choose-us.revealed::after, #gallery.revealed::after {
-  transform: translateX(100%);
-}
-
-/* 4. Cortină verticală (sus + jos) */
-#price-calculator {
-  position: relative;
-  overflow: hidden;
-}
-#price-calculator::before,
-#price-calculator::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: var(--cortina-color);
-  z-index: 2;
-  transition: transform 1s ease-in-out;
-}
-#price-calculator::before { top: 0; transform: translateY(0); }
-#price-calculator::after  { bottom: 0; transform: translateY(0); }
-#price-calculator.revealed::before { transform: translateY(-100%); }
-#price-calculator.revealed::after  { transform: translateY(100%); }

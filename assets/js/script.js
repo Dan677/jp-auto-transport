@@ -304,22 +304,13 @@ document.addEventListener("click", function(event) {
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  // selectează TOATE secțiunile cu efecte de cortină
-  const sections = document.querySelectorAll(
-    "#reals, #home, #blogs, #about, #services, #gallery, #testimonials, #faq, #team, #why-choose-us, #fleet, #pricing-factors, #price-calculator, #states, #contact"
-  );
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("revealed");
-      } else {
-        entry.target.classList.remove("revealed");
-        // 👉 dacă vrei ca efectul să rămână deschis permanent,
-        // comentează sau șterge linia asta
+  document.querySelectorAll("h1 span, h2 span, h3 span, h4 span, h5 span, h6 span").forEach(span => {
+    let letters = span.textContent.split(/( )/); // păstrează și spațiile
+    span.innerHTML = letters.map((l, i) => {
+      if (l === " ") {
+        return " "; // lasă spațiu simplu
       }
-    });
-  }, { threshold: 0.3 });
-
-  sections.forEach(section => observer.observe(section));
+      return `<span class="wave-letter" style="animation-delay:${i * 0.1}s">${l}</span>`;
+    }).join("");
+  });
 });
