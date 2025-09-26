@@ -2322,3 +2322,89 @@ body.light-mode .navbar .nav-link:hover {
   color: var(--light-text);
   text-shadow: 0 0 5px var(--light-neon-menta);
 }
+/* ========================= STATES TOOLTIP ========================= */
+.state-card {
+  position: relative; /* Necesar pentru a poziționa tooltip-ul corect */
+  overflow: hidden;   /* Ascunde ce depășește cardul */
+}
+
+.state-tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Fundal semi-transparent */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+
+  /* Starea inițială (ascuns) */
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* Când mouse-ul este peste card, tooltip-ul devine vizibil */
+.state-card:hover .state-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.state-tooltip strong {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 1.5rem;
+  color: var(--dark-neon-mov);
+  text-shadow: 0 0 8px var(--dark-neon-mov);
+  margin-bottom: 10px;
+}
+
+.state-tooltip p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+  text-shadow: 0 0 4px var(--dark-neon-albastru);
+}
+
+/* Light Mode Adaptations */
+.light-mode .state-tooltip strong {
+  color: var(--light-neon-menta);
+  text-shadow: 0 0 8px var(--light-neon-menta);
+}
+
+.light-mode .state-tooltip p {
+  text-shadow: 0 0 4px var(--light-neon-albastru);
+}
+/* ===== Fleet section styling ===== */
+.fleet-item {
+  border: 3px solid #9400d3; /* contur mov neon */
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 15px #9400d3, 0 0 30px rgba(148, 0, 211, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover efect pe desktop */
+.fleet-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #9400d3, 0 0 45px rgba(148, 0, 211, 0.8);
+}
+
+/* Light mode - contur albastru neon */
+body.light-mode .fleet-item {
+  border: 3px solid #00c3ff;
+  background: #f9f9f9;
+  box-shadow: 0 0 15px #00c3ff, 0 0 30px rgba(0, 195, 255, 0.6);
+}
+
+body.light-mode .fleet-item:hover {
+  box-shadow: 0 0 25px #00c3ff, 0 0 45px rgba(0, 195, 255, 0.8);
+}
