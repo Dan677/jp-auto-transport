@@ -2192,3 +2192,14 @@ body.light-mode .navbar .nav-link:hover {
   color: #00c3ff;
   text-shadow: 0 0 4px #00c3ff, 0 0 6px #00c3ff;
 }
+@media (hover: hover) and (pointer: fine) {
+  .navbar .nav-link:hover {
+    color: #9400d3;
+    text-shadow: 0 0 2px #9400d3, 0 0 4px #9400d3;
+  }
+
+  body.light-mode .navbar .nav-link:hover {
+    color: #00c3ff;
+    text-shadow: 0 0 2px #00c3ff, 0 0 4px #00c3ff;
+  }
+}
