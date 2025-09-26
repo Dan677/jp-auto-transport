@@ -304,19 +304,22 @@ document.addEventListener("click", function(event) {
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const aboutSection = document.querySelector('#about');
+  // selectează TOATE secțiunile cu efecte de cortină
+  const sections = document.querySelectorAll(
+    "#reals, #home, #blogs, #about, #services, #gallery, #testimonials, #faq, #team, #why-choose-us, #fleet, #pricing-factors, #price-calculator, #states, #contact"
+  );
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // când intră în viewport → deschide cortina
-        aboutSection.classList.add('open');
+        entry.target.classList.add("revealed");
       } else {
-        // când iese din viewport → închide cortina
-        aboutSection.classList.remove('open');
+        entry.target.classList.remove("revealed");
+        // 👉 dacă vrei ca efectul să rămână deschis permanent,
+        // comentează sau șterge linia asta
       }
     });
-  }, { threshold: 0.3 }); // 30% din secțiune vizibilă
+  }, { threshold: 0.3 });
 
-  observer.observe(aboutSection);
+  sections.forEach(section => observer.observe(section));
 });
