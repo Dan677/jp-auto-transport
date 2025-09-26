@@ -264,3 +264,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // ... (keep any existing code inside this function)
+
+    // FAQ Toggle Button
+    const toggleFaqBtn = document.getElementById('toggleFaqBtn');
+    const extraFaqs = document.querySelector('.extra-faqs');
+
+    if (toggleFaqBtn && extraFaqs) {
+        toggleFaqBtn.addEventListener('click', function() {
+            const isHidden = extraFaqs.style.display === 'none';
+            if (isHidden) {
+                extraFaqs.style.display = 'flex'; // Use 'flex' for rows
+                toggleFaqBtn.textContent = 'Less Questions';
+            } else {
+                extraFaqs.style.display = 'none';
+                toggleFaqBtn.textContent = 'More Questions';
+            }
+        });
+    }
+});
