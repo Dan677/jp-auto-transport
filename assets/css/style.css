@@ -2471,3 +2471,16 @@ body.light-mode .fleet-item:hover {
     line-height: 1.25;
   }
 }
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 15px;   /* mai mic sus și jos */
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 50px 12px;   /* și mai mic pe telefoane foarte mici */
+    margin: 20px 0;
+  }
+}
