@@ -2158,3 +2158,37 @@ body.light-mode .neon-icon {
   color: #00c3ff; /* albastru neon */
   text-shadow: 0 0 5px #00c3ff, 0 0 10px #00c3ff;
 }
+/* =========================
+   NAVBAR MOBILE SCROLL
+========================= */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    max-height: 80vh;   /* meniu max 80% din înălțimea ecranului */
+    overflow-y: auto;   /* scroll vertical dacă nu încape */
+  }
+
+  #themeToggleMobile {
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #9400d3;
+    color: #fff;
+  }
+
+  body.light-mode #themeToggleMobile {
+    border-color: #00c3ff;
+    color: #000;
+  }
+}
+
+/* =========================
+   NAVBAR LINK HOVER
+========================= */
+.navbar .nav-link:hover {
+  color: #9400d3;
+  text-shadow: 0 0 4px #9400d3, 0 0 6px #9400d3;
+}
+
+body.light-mode .navbar .nav-link:hover {
+  color: #00c3ff;
+  text-shadow: 0 0 4px #00c3ff, 0 0 6px #00c3ff;
+}
