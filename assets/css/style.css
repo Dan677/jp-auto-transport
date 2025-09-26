@@ -2571,3 +2571,41 @@ body.light-mode .team-name {
     3px 3px 0 #0dd,
     4px 4px 0 #0aa;
 }
+#about {
+  position: relative;
+  overflow: hidden;
+}
+
+/* cele două părți ale cortinei */
+#about::before,
+#about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: #0d1b2a; /* culoarea cortinei (o poți schimba) */
+  z-index: 5;
+  transition: transform 1s ease;
+}
+
+/* partea stângă */
+#about::before {
+  left: 0;
+  transform: translateX(0);
+}
+
+/* partea dreaptă */
+#about::after {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* când adaugi clasa .open la #about, cortina se deschide */
+#about.open::before {
+  transform: translateX(-100%);
+}
+
+#about.open::after {
+  transform: translateX(100%);
+}

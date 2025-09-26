@@ -303,3 +303,20 @@ document.addEventListener("click", function(event) {
     document.querySelectorAll(".custom-tooltip").forEach(el => el.style.display = "none");
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const aboutSection = document.querySelector('#about');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // când intră în viewport → deschide cortina
+        aboutSection.classList.add('open');
+      } else {
+        // când iese din viewport → închide cortina
+        aboutSection.classList.remove('open');
+      }
+    });
+  }, { threshold: 0.3 }); // 30% din secțiune vizibilă
+
+  observer.observe(aboutSection);
+});
