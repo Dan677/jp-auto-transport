@@ -319,3 +319,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }).join("");
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const spans = document.querySelectorAll("h2 span");
+
+  function createBurst(span) {
+    for (let i = 0; i < 20; i++) {
+      const particle = document.createElement("span");
+      particle.classList.add("particle");
+
+      // direcție random
+      const angle = Math.random() * 2 * Math.PI;
+      const distance = 40 + Math.random() * 40;
+      particle.style.setProperty("--x", `${Math.cos(angle) * distance}px`);
+      particle.style.setProperty("--y", `${Math.sin(angle) * distance}px`);
+
+      span.appendChild(particle);
+
+      particle.addEventListener("animationend", () => {
+        particle.remove();
+      });
+    }
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const span = entry.target;
+
+      if (entry.isIntersecting) {
+        // pornește burst loop cât timp e vizibil
+        span.burstInterval = setInterval(() => {
+          createBurst(span);
+        }, 1000); // la fiecare 1s se reface burst-ul
+      } else {
+        // oprește loop-ul când nu mai e pe ecran
+        clearInterval(span.burstInterval);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  spans.forEach(span => observer.observe(span));
+});

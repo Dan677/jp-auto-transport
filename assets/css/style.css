@@ -2673,3 +2673,38 @@ body.light-mode .fleet-item {
     border: 3px solid var(--light-neon-albastru); /* Corecție pentru consistență */
     animation-name: flicker-albastru-light;
 }
+h2 {
+  position: relative;
+  display: inline-block;
+}
+
+h2 span {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+h2 .particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: currentColor; /* ia culoarea span-ului */
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  animation: burst 1.4s forwards;
+}
+
+@keyframes burst {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1; /* particula vizibilă mult timp */
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(0.2);
+    opacity: 0; /* dispare abia la final */
+  }
+}
