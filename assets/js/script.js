@@ -359,3 +359,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   spans.forEach(span => observer.observe(span));
 });
+// Previne introducerea cifrelor în câmpul Name
+  const nameInput = document.getElementById('name');
+  nameInput.addEventListener('input', () => {
+    nameInput.value = nameInput.value.replace(/[0-9]/g, '');
+  });
+
+  // Previne introducerea literelor în câmpul Phone
+  const phoneInput = document.getElementById('phone');
+  phoneInput.addEventListener('input', () => {
+    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, '');
+  });
+
+  // Optional: custom validare email suplimentară
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', (e) => {
+    const email = document.getElementById('email').value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
+      e.preventDefault();
+    }
+  });

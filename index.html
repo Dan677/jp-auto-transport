@@ -800,9 +800,11 @@
           </div>
         </div>
       </div>
-
-      <button id="toggleFaqBtn" class="btn btn-neon mt-4">More Questions</button>
-
+      
+      <!-- Corect -->
+      <button id="toggleFaqBtn" class="btn btn-neon mt-4">
+        <span>More Questions</span>
+      </button>
     </div>
   </section>
 
@@ -1292,23 +1294,38 @@
 <section id="contact" class="section section-mov">
   <div class="container">
     <h2><span class="neon-mov">Reach</span> <span class="neon-albastru">Us</span></h2>
-    <form style="max-width:600px; margin:auto; text-align:left;">
+    <form style="max-width:600px; margin:auto; text-align:left;" id="contactForm">
       <div class="mb-3">
-        <label for="name">Name</label>
-        <input type="text" class="form-control custom-focus" id="name" required>
+        <label for="name" class="label-name">Name</label>
+        <input type="text" class="form-control custom-focus" id="name" required pattern="^[A-Za-z\s]+$" title="Name cannot contain numbers or special characters">
       </div>
+
       <div class="mb-3">
-        <label for="phone">Phone Number</label>
-        <input type="tel" class="form-control custom-focus" id="phone" required>
+        <label for="phone" class="label-phone">Phone Number</label>
+        <input type="tel" class="form-control custom-focus" id="phone" required
+               pattern="^\+?1?\d{10}$" title="Enter a valid US phone number (10 digits)">
       </div>
+
       <div class="mb-3">
-        <label for="email">Email Address</label>
+        <label for="email" class="label-email">Email Address</label>
         <input type="email" class="form-control custom-focus" id="email" required>
       </div>
+
       <div class="mb-3">
-        <label for="message">Message</label>
+        <label for="pickup" class="label-pickup">Pickup Address</label>
+        <input type="text" class="form-control custom-focus" id="pickup" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="delivery" class="label-delivery">Delivery Address</label>
+        <input type="text" class="form-control custom-focus" id="delivery" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="label-message">Message</label>
         <textarea class="form-control custom-focus" id="message" rows="5" required></textarea>
       </div>
+
       <button type="submit" class="btn btn-neon">Send Message</button>
     </form>
   </div>

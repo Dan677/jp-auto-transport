@@ -162,19 +162,21 @@ body {
 
 .light-mode .btn-neon {
   border-color: #6bd9a5;
-  /* verde menta mai soft */
   color: #6bd9a5;
   text-shadow: 0 0 2px #6bd9a5, 0 0 4px #6bd9a5;
-  /* mai puțin glow */
 }
 
+.light-mode .btn-neon:hover {
+  color: #4bb0d4;
+  border-color: #4bb0d4;
+  text-shadow: 0 0 3px #4bb0d4, 0 0 6px #4bb0d4;
+}
 .light-mode .btn-neon:hover {
   color: #4bb0d4;
   /* albastru soft */
   border-color: #4bb0d4;
   text-shadow: 0 0 3px #4bb0d4, 0 0 6px #4bb0d4;
 }
-
 /*======================== SCROLL TO TOP ========================*/
 #topBtn {
   position: fixed;
@@ -2708,3 +2710,36 @@ h2 .particle {
     opacity: 0; /* dispare abia la final */
   }
 }
+ :root {
+      --blue-neon: #00cfff;
+      --purple-neon: #b400b4;
+      --mint-neon: #32d18a;
+    }
+
+    body.dark-mode .label-name,
+    body.dark-mode .label-email,
+    body.dark-mode .label-delivery {
+      color: var(--blue-neon) !important;
+      text-shadow: 0 0 3px var(--blue-neon), 0 0 6px var(--blue-neon) !important;
+    }
+
+    body.dark-mode .label-phone,
+    body.dark-mode .label-pickup,
+    body.dark-mode .label-message {
+      color: var(--purple-neon) !important;
+      text-shadow: 0 0 3px var(--purple-neon), 0 0 6px var(--purple-neon) !important;
+    }
+
+    body.light-mode .label-name,
+    body.light-mode .label-email,
+    body.light-mode .label-delivery {
+      color: var(--blue-neon) !important;
+      text-shadow: 0 0 2px var(--blue-neon), 0 0 4px var(--blue-neon) !important;
+    }
+
+    body.light-mode .label-phone,
+    body.light-mode .label-pickup,
+    body.light-mode .label-message {
+      color: var(--mint-neon) !important;
+      text-shadow: 0 0 2px var(--mint-neon), 0 0 4px var(--mint-neon) !important;
+    }
