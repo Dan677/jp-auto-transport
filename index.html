@@ -1071,23 +1071,22 @@
     <h2><span class="neon-mov">Get A</span> <span class="neon-albastru">Quote</span></h2>
     <form id="calculatorForm" class="row g-3 justify-content-center">
 
-      <!-- Distance (NUMERIC) -->
       <div class="col-md-4">
         <label for="distance" class="form-label">Distance (miles)</label>
-        <input type="number" id="distance" class="form-control neon-input" placeholder="Enter distance" required>
+        <input type="number" id="distance" class="form-control neon-input" placeholder="Enter distance" required min="1">
       </div>
 
-      <!-- Transport Type (dropdown) -->
       <div class="col-md-4">
-        <label for="transportType" class="form-label">What you transport?</label>
-        <select id="transportType" class="form-select neon-input">
-          <option value="open-carrier">Sedan/SUV</option>
-          <option value="pickup-truck">Pick Up Truck</option>
-        </select>
+        <label for="sedanCount" class="form-label">Number of Sedans/SUVs</label>
+        <input type="number" id="sedanCount" class="form-control neon-input" placeholder="e.g., 1" min="0" value="0">
       </div>
 
-      <!-- Button -->
-      <div class="col-12 text-center">
+      <div class="col-md-4">
+        <label for="truckCount" class="form-label">Number of Pick Up Trucks</label>
+        <input type="number" id="truckCount" class="form-control neon-input" placeholder="e.g., 1" min="0" value="0">
+      </div>
+
+      <div class="col-12 text-center mt-4">
         <button type="submit" class="btn btn-neon">Calculate Price</button>
       </div>
     </form>

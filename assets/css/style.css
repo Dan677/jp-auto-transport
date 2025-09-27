@@ -2580,3 +2580,96 @@ body.light-mode .team-name {
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-8px); }
 }
+/*======================== BORDER FLICKER ANIMATION ADDITIONS ========================*/
+
+/* 1. Definițiile animațiilor (Keyframes) */
+@keyframes flicker-mov-dark {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    border-color: var(--dark-neon-mov);
+    box-shadow: 0 0 5px var(--dark-neon-mov), 0 0 10px var(--dark-neon-mov), 0 0 20px var(--dark-neon-mov), inset 0 0 10px var(--dark-neon-mov);
+  }
+  20%, 24%, 55% {
+    border-color: #fff;
+    box-shadow: 0 0 10px var(--dark-neon-mov), 0 0 25px var(--dark-neon-mov), 0 0 50px var(--dark-neon-mov), inset 0 0 20px var(--dark-neon-mov);
+  }
+}
+
+@keyframes flicker-albastru-dark {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    border-color: var(--dark-neon-albastru);
+    box-shadow: 0 0 5px var(--dark-neon-albastru), 0 0 10px var(--dark-neon-albastru), 0 0 20px var(--dark-neon-albastru), inset 0 0 10px var(--dark-neon-albastru);
+  }
+  20%, 24%, 55% {
+    border-color: #fff;
+    box-shadow: 0 0 10px var(--dark-neon-albastru), 0 0 25px var(--dark-neon-albastru), 0 0 50px var(--dark-neon-albastru), inset 0 0 20px var(--dark-neon-albastru);
+  }
+}
+
+@keyframes flicker-menta-light {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    border-color: var(--light-neon-menta);
+    box-shadow: 0 0 5px var(--light-neon-menta), 0 0 10px var(--light-neon-menta), 0 0 20px var(--light-neon-menta), inset 0 0 10px var(--light-neon-menta);
+  }
+  20%, 24%, 55% {
+    border-color: #333;
+    box-shadow: 0 0 10px var(--light-neon-menta), 0 0 25px var(--light-neon-menta), 0 0 50px var(--light-neon-menta), inset 0 0 20px var(--light-neon-menta);
+  }
+}
+
+@keyframes flicker-albastru-light {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    border-color: var(--light-neon-albastru);
+    box-shadow: 0 0 5px var(--light-neon-albastru), 0 0 10px var(--light-neon-albastru), 0 0 20px var(--light-neon-albastru), inset 0 0 10px var(--light-neon-albastru);
+  }
+  20%, 24%, 55% {
+    border-color: #333;
+    box-shadow: 0 0 10px var(--light-neon-albastru), 0 0 25px var(--light-neon-albastru), 0 0 50px var(--light-neon-albastru), inset 0 0 20px var(--light-neon-albastru);
+  }
+}
+
+/* 2. Aplicarea animațiilor pe carduri (Dark Mode) */
+.home-card,
+.swiper-slide.service-card,
+.why-card,
+.team-card {
+    animation: flicker-mov-dark 4s linear infinite;
+}
+
+.gallery-card,
+.real-card,
+.blog-card,
+.testimonial-card,
+.faq-card,
+.factor-card,
+.state-card {
+    animation: flicker-albastru-dark 4s linear infinite;
+}
+
+/* 3. Suprascrierea animațiilor pentru Light Mode */
+.light-mode .home-card,
+.light-mode .swiper-slide.service-card,
+.light-mode .gallery-card,
+.light-mode .real-card,
+.light-mode .blog-card,
+.light-mode .why-card,
+.light-mode .team-card,
+.light-mode .factor-card,
+.light-mode .state-card {
+    animation-name: flicker-menta-light;
+}
+
+.light-mode .testimonial-card,
+.light-mode .faq-card {
+    animation-name: flicker-albastru-light;
+}
+
+/* 4. Corecții și animație pentru Fleet */
+.fleet-item {
+    border: 3px solid var(--dark-neon-mov); /* Corecție pentru consistență */
+    animation: flicker-mov-dark 4s linear infinite;
+}
+
+body.light-mode .fleet-item {
+    border: 3px solid var(--light-neon-albastru); /* Corecție pentru consistență */
+    animation-name: flicker-albastru-light;
+}

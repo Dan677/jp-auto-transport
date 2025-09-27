@@ -245,25 +245,30 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
 
       const distance = parseFloat(document.getElementById("distance").value);
-      const transportType = document.getElementById("transportType").value;
+      const sedanCount = parseInt(document.getElementById("sedanCount").value) || 0;
+      const truckCount = parseInt(document.getElementById("truckCount").value) || 0;
 
       if (isNaN(distance) || distance <= 0) {
         result.textContent = "⚠️ Please enter a valid distance.";
         return;
       }
 
-      let ratePerMile = 0;
-      if (transportType === "open-carrier") {
-        ratePerMile = 1.0;
-      } else if (transportType === "pickup-truck") {
-        ratePerMile = 1.5;
+      if (sedanCount === 0 && truckCount === 0) {
+        result.textContent = "⚠️ Please enter at least one vehicle.";
+        return;
       }
 
-      const totalPrice = distance * ratePerMile;
+      const sedanRate = 1.0;
+      const truckRate = 1.5;
+
+      const totalPrice = (sedanCount * distance * sedanRate) +
+                         (truckCount * distance * truckRate);
+
       result.textContent = `Estimated Price: $${totalPrice.toFixed(2)}`;
     });
   }
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     // ... (keep any existing code inside this function)
 
