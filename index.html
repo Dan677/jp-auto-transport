@@ -85,7 +85,7 @@
   <div class="container">
 
     <!-- Titlul sus -->
-    <h2><span class="neon-mov">Home</span></h2>
+    <h2><span class="neon-mov">Welcome to </span><span class="neon-albastru">JP Auto Transport</span></h2>
 
     <div class="about-container">
       <!-- Stânga: imaginea -->
@@ -757,10 +757,10 @@
       <div class="col-lg-4 col-md-6 mb-4 d-flex">
         <div class="faq-card">
           <div class="faq-question">
-            What's the difference between open and enclosed transport?
+            What's the cost difference between SUVs and Pickup Trucks?
           </div>
           <div class="faq-answer">
-            Open transport is the standard, cost-effective method. Enclosed transport offers maximum protection from weather and road debris, ideal for luxury or classic cars.
+            SUVs usually cost less to transport compared to pickup trucks. This is because pickups are larger, heavier, and often require more space on the carrier, which increases the overall rate.
           </div>
         </div>
       </div>
@@ -1286,36 +1286,36 @@
 <section id="contact" class="section section-mov">
   <div class="container">
     <h2><span class="neon-mov">Reach</span> <span class="neon-albastru">Us</span></h2>
-    <form style="max-width:600px; margin:auto; text-align:left;" id="contactForm">
+    <form style="max-width:600px; margin:auto; text-align:left;" id="contactForm" action="contact.php" method="POST">
       <div class="mb-3">
         <label for="name" class="label-name">Name</label>
-        <input type="text" class="form-control custom-focus" id="name" required pattern="^[A-Za-z\s]+$" title="Name cannot contain numbers or special characters">
+        <input type="text" class="form-control custom-focus" id="name" name="name" required pattern="^[A-Za-z\s]+$" title="Name cannot contain numbers or special characters">
       </div>
 
       <div class="mb-3">
         <label for="phone" class="label-phone">Phone Number</label>
-        <input type="tel" class="form-control custom-focus" id="phone" required
+        <input type="tel" class="form-control custom-focus" id="phone" name="phone" required
                pattern="^\+?1?\d{10}$" title="Enter a valid US phone number (10 digits)">
       </div>
 
       <div class="mb-3">
         <label for="email" class="label-email">Email Address</label>
-        <input type="email" class="form-control custom-focus" id="email" required>
+        <input type="email" class="form-control custom-focus" id="email" name="email" required>
       </div>
 
       <div class="mb-3">
         <label for="pickup" class="label-pickup">Pickup Address</label>
-        <input type="text" class="form-control custom-focus" id="pickup" required>
+        <input type="text" class="form-control custom-focus" id="pickup" name="pickup" required>
       </div>
 
       <div class="mb-3">
         <label for="delivery" class="label-delivery">Delivery Address</label>
-        <input type="text" class="form-control custom-focus" id="delivery" required>
+        <input type="text" class="form-control custom-focus" id="delivery" name="delivery" required>
       </div>
 
       <div class="mb-3">
         <label for="message" class="label-message">Message</label>
-        <textarea class="form-control custom-focus" id="message" rows="5" required></textarea>
+        <textarea class="form-control custom-focus" id="message" name="message" rows="5" required></textarea>
       </div>
 
       <button type="submit" class="btn btn-neon">Send Message</button>
