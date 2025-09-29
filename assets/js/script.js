@@ -381,3 +381,46 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
     }
   });
+document.addEventListener('DOMContentLoaded', () => {
+
+    const cookieConsentModal = document.getElementById('cookieConsent');
+    const acceptAllBtn = document.getElementById('acceptAll');
+    const rejectAllBtn = document.getElementById('rejectAll');
+    const confirmChoicesBtn = document.getElementById('confirmChoices');
+    const cookieFloatingBtn = document.getElementById('cookieFloatingBtn');
+
+    // Funcție care ascunde fereastra mare și arată butonul mic
+    const handleConsent = () => {
+        cookieConsentModal.style.opacity = '0';
+        cookieConsentModal.style.visibility = 'hidden';
+
+        // Aici facem butonul vizibil
+        cookieFloatingBtn.style.display = 'flex';
+
+        // Salvăm în memoria browserului că utilizatorul a făcut o alegere
+        localStorage.setItem('cookie_consent_given', 'true');
+    };
+
+    // Când se dă click pe butonul mic, se redeschide fereastra mare
+    cookieFloatingBtn.addEventListener('click', () => {
+        cookieConsentModal.style.opacity = '1';
+        cookieConsentModal.style.visibility = 'visible';
+    });
+
+    // Adăugăm funcționalitate butoanelor din fereastra mare
+    acceptAllBtn.addEventListener('click', handleConsent);
+    rejectAllBtn.addEventListener('click', handleConsent);
+    confirmChoicesBtn.addEventListener('click', handleConsent);
+
+    // Verificăm dacă utilizatorul a mai fost pe site și a făcut deja o alegere
+    if (!localStorage.getItem('cookie_consent_given')) {
+        // Dacă NU a făcut o alegere, arătăm fereastra mare după 1.5 secunde
+        setTimeout(() => {
+            cookieConsentModal.style.opacity = '1';
+            cookieConsentModal.style.visibility = 'visible';
+        }, 1500);
+    } else {
+        // Dacă DA, arătăm direct butonul mic
+        cookieFloatingBtn.style.display = 'flex';
+    }
+});
