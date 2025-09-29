@@ -3213,13 +3213,13 @@ p:hover {
   .cookie-content {
     padding: 1.5rem;
     border-width: 1px;
-    box-shadow: 0 0 4px var(--dark-neon-mov); /* glow mai redus */
-    animation: none; /* oprește flicker-ul puternic pe mobil */
+    box-shadow: 0 0 4px var(--dark-neon-mov);
+    animation: none;
   }
 
   .cookie-content p {
     font-size: 0.9rem;
-    text-shadow: none; /* scoatem glow-ul pe mobil */
+    text-shadow: none;
   }
 
   .btn-cookie {
@@ -3231,49 +3231,68 @@ p:hover {
   }
 
   .btn-cookie:hover {
-    box-shadow: 0 0 6px var(--dark-neon-mov); /* mic glow doar la hover */
+    box-shadow: 0 0 6px var(--dark-neon-mov);
   }
 
   .cookie-floating {
     width: 40px;
     height: 40px;
     font-size: 18px;
-    box-shadow: 0 0 6px var(--dark-neon-mov); /* mai mic glow */
+    box-shadow: 0 0 6px var(--dark-neon-mov);
+  }
+
+  /* LIGHT MODE - MOBILE */
+  .light-mode .cookie-content,
+  .light-mode .cookie-content h2,
+  .light-mode .cookie-content p {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .light-mode .btn-cookie {
+    background: transparent !important;
+    color: #000 !important;
+    border: 2px solid #00aaff !important;
+    text-shadow: none !important;
+    box-shadow: 0 0 4px rgba(0,170,255,0.4) !important;
+  }
+
+  .light-mode .btn-cookie:hover {
+    color: #00aaff !important;
+    background: rgba(0,170,255,0.08) !important;
+    border-color: #00ccff !important;
+    box-shadow: 0 0 8px rgba(0,170,255,0.8) !important;
   }
 }
 
-/* ===========================
-   LIGHT MODE - Desktop + Mobile
-   =========================== */
-@media (prefers-color-scheme: light) {
-  /* Caseta modal */
+/* ===== LIGHT MODE - DESKTOP ===== */
+@media (prefers-color-scheme: light) and (min-width: 769px) {
   .light-mode .cookie-content {
     background: var(--light-bg);
-    color: #000 !important; /* text negru */
+    color: #000 !important;
     border: 2px solid #00aaff !important;
-    box-shadow: 0 0 6px rgba(0,170,255,0.4) !important; /* neon discret */
-    animation: none; /* scoatem flicker-ul */
+    box-shadow: 0 0 6px rgba(0,170,255,0.4) !important;
+    animation: none;
   }
 
   .light-mode .cookie-content h2,
   .light-mode .cookie-content p {
-    color: #000 !important; /* scris negru */
-    text-shadow: none !important; /* fără glow */
+    color: #000 !important;
+    text-shadow: none !important;
   }
 
-  /* Butoane */
   .light-mode .btn-cookie {
     background: transparent !important;
-    color: #000 !important; /* scris negru */
-    border: 2px solid #00aaff !important; /* albastru electric */
+    color: #000 !important;
+    border: 2px solid #00aaff !important;
     text-shadow: none !important;
-    box-shadow: 0 0 4px rgba(0,170,255,0.4) !important; /* efect discret */
+    box-shadow: 0 0 4px rgba(0,170,255,0.4) !important;
   }
 
   .light-mode .btn-cookie:hover {
-    color: #00aaff !important; /* text albastru la hover */
-    background: rgba(0,170,255,0.08) !important; /* accent la hover */
-    border-color: #00ccff !important; /* mai intens */
+    color: #00aaff !important;
+    background: rgba(0,170,255,0.08) !important;
+    border-color: #00ccff !important;
     box-shadow: 0 0 8px rgba(0,170,255,0.8) !important;
   }
 }
