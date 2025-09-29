@@ -3013,3 +3013,77 @@ p:hover {
   70%  { transform: translate(-50%, -50%) scale(1.2); opacity: 0; }
   100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
 }
+.footer-logo-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.footer-logo {
+  display: block;
+  width: 180px; /* ajustează dimensiunea după nevoie */
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: brightness(1.1) contrast(1.2);
+  animation: digital-flicker 2.5s infinite;
+}
+
+/* Scan lines (linii orizontale ca la ecrane vechi) */
+.footer-logo-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 100, 0.08) 0px,
+    rgba(0, 255, 100, 0.08) 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: scan-move 4s linear infinite;
+}
+
+/* Pâlpâire digitală */
+@keyframes digital-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
+
+/* Mișcarea scan lines */
+@keyframes scan-move {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* DARK MODE → verde neon */
+@media (prefers-color-scheme: dark) {
+  .footer-logo-wrapper::after {
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 255, 100, 0.12) 0px,
+      rgba(0, 255, 100, 0.12) 2px,
+      transparent 4px
+    );
+  }
+}
+
+/* LIGHT MODE → albastru neon */
+@media (prefers-color-scheme: light) {
+  .footer-logo-wrapper::after {
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 150, 255, 0.12) 0px,
+      rgba(0, 150, 255, 0.12) 2px,
+      transparent 4px
+    );
+  }
+}
