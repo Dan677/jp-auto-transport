@@ -3123,54 +3123,65 @@ p:hover {
 }
 
 /* ==== DARK MODE (default) ==== */
+/* ==== TEXT NORMAL ==== */
 .jp {
   color: #ff3333; /* roșu aprins */
-  text-shadow: 0 0 3px #ff3333, 0 0 6px #cc0000;
+  text-shadow: 0 0 2px #ff3333, 0 0 4px #cc0000;
 }
 
 .auto {
   color: #ffeb33; /* galben luminos */
-  text-shadow: 0 0 3px #ffeb33, 0 0 6px #ccbb00;
+  text-shadow: 0 0 2px #ffeb33, 0 0 4px #ccbb00;
 }
 
 .transport {
   color: #3399ff; /* albastru deschis */
-  text-shadow: 0 0 3px #3399ff, 0 0 6px #0066cc;
+  text-shadow: 0 0 2px #3399ff, 0 0 4px #0066cc;
 }
 
 /* ==== LIGHT MODE ==== */
 @media (prefers-color-scheme: light) {
   .jp {
-    color: #b22222; /* roșu închis */
+    color: #b22222;
     text-shadow: 0 0 1px #b22222, 0 0 2px #801515;
   }
-
   .auto {
-    color: #bfa600; /* galben mai închis */
+    color: #bfa600;
     text-shadow: 0 0 1px #bfa600, 0 0 2px #7a6b00;
   }
-
   .transport {
-    color: #0047ab; /* albastru cobalt închis */
+    color: #0047ab;
     text-shadow: 0 0 1px #0047ab, 0 0 2px #002b66;
   }
 }
-/* Efect palpitare neon */
+
+/* ==== MOBILE OPTIMIZATION ==== */
+@media (max-width: 768px) {
+  .navbar-brand .jp,
+  .navbar-brand .auto,
+  .navbar-brand .transport {
+    text-shadow: 0 0 1px currentColor, 0 0 2px currentColor; /* glow redus */
+  }
+}
+
+/* ==== ANIMAȚII ==== */
+/* Palpitare neon */
 @keyframes flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
     opacity: 1;
-    text-shadow: 0 0 3px currentColor, 0 0 6px currentColor, 0 0 12px currentColor;
+    text-shadow: 0 0 2px currentColor, 0 0 4px currentColor;
   }
   20%, 24%, 55% {
     opacity: 0.7;
     text-shadow: 0 0 1px currentColor;
   }
 }
-/* Bounce animatie */
+
+/* Bounce */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-8px); }
-  60% { transform: translateY(-4px); }
+  40% { transform: translateY(-6px); }
+  60% { transform: translateY(-3px); }
 }
 
 .navbar-brand .jp,
