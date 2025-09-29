@@ -2901,3 +2901,15 @@ h2 .particle {
   from { border-color: transparent }
   to   { border-color: #00f0ff }
 }
+.capacity-number {
+  display: inline-block;
+  font-weight: bold;
+  animation: flip 2s infinite linear;
+}
+
+/* Animația flip */
+@keyframes flip {
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
