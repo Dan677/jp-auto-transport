@@ -3115,3 +3115,43 @@ p:hover {
 .footer-icon:hover {
   transform: skew(15deg, 5deg);
 }
+.navbar-brand {
+  font-size: 1.25rem; /* dimensiunea standard Bootstrap */
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* ==== DARK MODE (default) ==== */
+.jp {
+  color: #ff3333; /* roșu aprins */
+  text-shadow: 0 0 3px #ff3333, 0 0 6px #cc0000;
+}
+
+.auto {
+  color: #ffeb33; /* galben luminos */
+  text-shadow: 0 0 3px #ffeb33, 0 0 6px #ccbb00;
+}
+
+.transport {
+  color: #3399ff; /* albastru deschis */
+  text-shadow: 0 0 3px #3399ff, 0 0 6px #0066cc;
+}
+
+/* ==== LIGHT MODE ==== */
+@media (prefers-color-scheme: light) {
+  .jp {
+    color: #b22222; /* roșu închis */
+    text-shadow: 0 0 1px #b22222, 0 0 2px #801515;
+  }
+
+  .auto {
+    color: #bfa600; /* galben mai închis */
+    text-shadow: 0 0 1px #bfa600, 0 0 2px #7a6b00;
+  }
+
+  .transport {
+    color: #0047ab; /* albastru cobalt închis */
+    text-shadow: 0 0 1px #0047ab, 0 0 2px #002b66;
+  }
+}
