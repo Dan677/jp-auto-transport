@@ -3191,3 +3191,20 @@ p:hover {
   animation: bounce 2s infinite;
   font-weight: bold;
 }
+/* ==== MOBILE OPTIMIZATION ==== */
+@media (max-width: 768px) {
+  .navbar-brand .jp,
+  .navbar-brand .auto,
+  .navbar-brand .transport {
+    text-shadow: 0 0 1px currentColor, 0 0 2px currentColor !important;
+    -webkit-text-stroke: 0.5px currentColor; /* contur discret, ajută lizibilitatea */
+  }
+}
+.navbar {
+  background: rgba(0, 0, 0, 0.9); /* negru cu ușoară transparență */
+  backdrop-filter: blur(6px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
