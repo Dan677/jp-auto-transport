@@ -424,7 +424,8 @@ document.addEventListener('DOMContentLoaded', () => {
         cookieFloatingBtn.style.display = 'flex';
     }
 });
- const btn = document.getElementById("servicesBtn");
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("servicesBtn");
   const text = document.getElementById("servicesText");
 
   btn.addEventListener("click", () => {
@@ -436,3 +437,4 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = "Read More";
     }
   });
+});
