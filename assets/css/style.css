@@ -3219,14 +3219,14 @@ p:hover {
 
   .cookie-content p {
     font-size: 0.9rem;
-    text-shadow: 0 0 2px var(--dark-neon-albastru); /* text mai curat */
+    text-shadow: none; /* scoatem glow-ul pe mobil */
   }
 
   .btn-cookie {
     padding: 8px 14px;
     font-size: 0.85rem;
     border-width: 1px;
-    text-shadow: 0 0 2px var(--dark-neon-albastru);
+    text-shadow: none;
     box-shadow: none;
   }
 
@@ -3241,22 +3241,39 @@ p:hover {
     box-shadow: 0 0 6px var(--dark-neon-mov); /* mai mic glow */
   }
 }
+
 /* ===========================
-   LIGHT MODE - Butoane clare
+   LIGHT MODE - Desktop + Mobile
    =========================== */
 @media (prefers-color-scheme: light) {
+  /* Caseta modal */
+  .light-mode .cookie-content {
+    background: var(--light-bg);
+    color: #000 !important; /* text negru */
+    border: 2px solid #00aaff !important;
+    box-shadow: 0 0 6px rgba(0,170,255,0.4) !important; /* neon discret */
+    animation: none; /* scoatem flicker-ul */
+  }
+
+  .light-mode .cookie-content h2,
+  .light-mode .cookie-content p {
+    color: #000 !important; /* scris negru */
+    text-shadow: none !important; /* fără glow */
+  }
+
+  /* Butoane */
   .light-mode .btn-cookie {
     background: transparent !important;
-    color: #000 !important; /* text negru */
+    color: #000 !important; /* scris negru */
     border: 2px solid #00aaff !important; /* albastru electric */
-    text-shadow: none !important; /* fără glow */
-    box-shadow: 0 0 6px rgba(0,170,255,0.6) !important; /* mic efect neon discret */
+    text-shadow: none !important;
+    box-shadow: 0 0 4px rgba(0,170,255,0.4) !important; /* efect discret */
   }
 
   .light-mode .btn-cookie:hover {
-    color: #00aaff !important; /* text devine albastru electric la hover */
-    background: rgba(0,170,255,0.08) !important; /* un mic accent */
-    border-color: #00ccff !important; /* mai intens la hover */
-    box-shadow: 0 0 10px rgba(0,170,255,0.8) !important;
+    color: #00aaff !important; /* text albastru la hover */
+    background: rgba(0,170,255,0.08) !important; /* accent la hover */
+    border-color: #00ccff !important; /* mai intens */
+    box-shadow: 0 0 8px rgba(0,170,255,0.8) !important;
   }
 }
