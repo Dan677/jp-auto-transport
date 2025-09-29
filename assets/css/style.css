@@ -2921,3 +2921,27 @@ p:hover {
   transform: scale(1.05); /* mărește ușor textul */
   color: #00e5ff;         /* opțional – schimbă culoarea la hover (poți scoate dacă nu vrei) */
 }
+.home-card-title {
+  animation: flicker 2.5s infinite;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
+.why-number {
+  animation: flicker 2.5s infinite;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}

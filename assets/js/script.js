@@ -424,17 +424,3 @@ document.addEventListener('DOMContentLoaded', () => {
         cookieFloatingBtn.style.display = 'flex';
     }
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("servicesBtn");
-  const text = document.getElementById("servicesText");
-
-  btn.addEventListener("click", () => {
-    if (text.style.display === "none" || text.style.display === "") {
-      text.style.display = "block";
-      btn.textContent = "Read Less";
-    } else {
-      text.style.display = "none";
-      btn.textContent = "Read More";
-    }
-  });
-});
