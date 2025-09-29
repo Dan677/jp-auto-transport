@@ -3208,3 +3208,36 @@ p:hover {
   width: 100%;
   z-index: 999;
 }
+/* ===== OPTIMIZARE MOBILE ===== */
+@media (max-width: 768px) {
+  .cookie-content {
+    padding: 1.5rem;
+    border-width: 1px;
+    box-shadow: 0 0 4px var(--dark-neon-mov); /* glow mai redus */
+    animation: none; /* oprește flicker-ul puternic pe mobil */
+  }
+
+  .cookie-content p {
+    font-size: 0.9rem;
+    text-shadow: 0 0 2px var(--dark-neon-albastru); /* text mai curat */
+  }
+
+  .btn-cookie {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    border-width: 1px;
+    text-shadow: 0 0 2px var(--dark-neon-albastru);
+    box-shadow: none;
+  }
+
+  .btn-cookie:hover {
+    box-shadow: 0 0 6px var(--dark-neon-mov); /* mic glow doar la hover */
+  }
+
+  .cookie-floating {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    box-shadow: 0 0 6px var(--dark-neon-mov); /* mai mic glow */
+  }
+}
