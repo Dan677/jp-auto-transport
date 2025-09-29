@@ -2877,7 +2877,34 @@ h2 .particle {
   border-color: var(--light-neon-menta);
   box-shadow: 0 0 10px var(--light-neon-menta), 0 0 20px var(--light-neon-menta);
 }
+/* --- Stiluri Cookie pentru Light Mode --- */
+.light-mode .cookie-content {
+  background: var(--light-bg);
+  color: #000 !important; /* text principal negru */
+  border-color: #00aaff; /* albastru electric */
+  animation: none; /* scoatem flicker-ul pe light */
+}
 
+.light-mode .cookie-content p {
+  color: #000 !important; /* scris negru */
+  text-shadow: none !important; /* fără glow */
+}
+
+/* ✅ Butoane pe Light Mode */
+.light-mode .btn-cookie {
+  background: transparent !important;
+  color: #000 !important; /* scris negru */
+  border: 2px solid #00aaff !important; /* contur albastru electric */
+  text-shadow: none !important;
+  box-shadow: 0 0 4px rgba(0,170,255,0.4) !important; /* glow discret */
+}
+
+.light-mode .btn-cookie:hover {
+  color: #00aaff !important; /* text albastru la hover */
+  background: rgba(0,170,255,0.08) !important; /* accent fin */
+  border-color: #00ccff !important; /* contur mai intens */
+  box-shadow: 0 0 8px rgba(0,170,255,0.8) !important; /* glow mai puternic */
+}
 .fleet-title {
   font-weight: bold;
   font-size: 1.8rem;
@@ -3207,92 +3234,4 @@ p:hover {
   top: 0;
   width: 100%;
   z-index: 999;
-}
-/* ===== OPTIMIZARE MOBILE ===== */
-@media (max-width: 768px) {
-  .cookie-content {
-    padding: 1.5rem;
-    border-width: 1px;
-    box-shadow: 0 0 4px var(--dark-neon-mov);
-    animation: none;
-  }
-
-  .cookie-content p {
-    font-size: 0.9rem;
-    text-shadow: none;
-  }
-
-  .btn-cookie {
-    padding: 8px 14px;
-    font-size: 0.85rem;
-    border-width: 1px;
-    text-shadow: none;
-    box-shadow: none;
-  }
-
-  .btn-cookie:hover {
-    box-shadow: 0 0 6px var(--dark-neon-mov);
-  }
-
-  .cookie-floating {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    box-shadow: 0 0 6px var(--dark-neon-mov);
-  }
-
-  /* LIGHT MODE - MOBILE */
-  .light-mode .cookie-content,
-  .light-mode .cookie-content h2,
-  .light-mode .cookie-content p {
-    color: #000 !important;
-    text-shadow: none !important;
-  }
-
-  .light-mode .btn-cookie {
-    background: transparent !important;
-    color: #000 !important;
-    border: 2px solid #00aaff !important;
-    text-shadow: none !important;
-    box-shadow: 0 0 4px rgba(0,170,255,0.4) !important;
-  }
-
-  .light-mode .btn-cookie:hover {
-    color: #00aaff !important;
-    background: rgba(0,170,255,0.08) !important;
-    border-color: #00ccff !important;
-    box-shadow: 0 0 8px rgba(0,170,255,0.8) !important;
-  }
-}
-
-/* ===== LIGHT MODE - DESKTOP ===== */
-@media (prefers-color-scheme: light) and (min-width: 769px) {
-  .light-mode .cookie-content {
-    background: var(--light-bg);
-    color: #000 !important;
-    border: 2px solid #00aaff !important;
-    box-shadow: 0 0 6px rgba(0,170,255,0.4) !important;
-    animation: none;
-  }
-
-  .light-mode .cookie-content h2,
-  .light-mode .cookie-content p {
-    color: #000 !important;
-    text-shadow: none !important;
-  }
-
-  .light-mode .btn-cookie {
-    background: transparent !important;
-    color: #000 !important;
-    border: 2px solid #00aaff !important;
-    text-shadow: none !important;
-    box-shadow: 0 0 4px rgba(0,170,255,0.4) !important;
-  }
-
-  .light-mode .btn-cookie:hover {
-    color: #00aaff !important;
-    background: rgba(0,170,255,0.08) !important;
-    border-color: #00ccff !important;
-    box-shadow: 0 0 8px rgba(0,170,255,0.8) !important;
-  }
 }
