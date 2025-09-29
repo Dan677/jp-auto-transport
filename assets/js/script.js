@@ -424,3 +424,13 @@ document.addEventListener('DOMContentLoaded', () => {
         cookieFloatingBtn.style.display = 'flex';
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const icons = document.querySelectorAll(".factor-icon");
+
+    icons.forEach(icon => {
+      icon.addEventListener("click", () => {
+        // toggle active class la click/tap
+        icon.classList.toggle("active");
+      });
+    });
+  });
