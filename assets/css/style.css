@@ -2878,7 +2878,26 @@ h2 .particle {
   box-shadow: 0 0 10px var(--light-neon-menta), 0 0 20px var(--light-neon-menta);
 }
 
-.light-mode .cookie-floating:hover {
-    box-shadow: 0 0 15px var(--light-neon-albastru), 0 0 30px var(--light-neon-albastru);
-    border-color: var(--light-neon-albastru);
+.fleet-title {
+  font-weight: bold;
+  font-size: 1.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #00f0ff; /* cursor */
+  display: inline-block;
+  animation: typing 2.5s steps(20, end) infinite,
+             blink 0.7s step-end infinite alternate;
+}
+
+/* efect de scriere */
+@keyframes typing {
+  0%   { width: 0 }
+  50%  { width: 100% }
+  100% { width: 0 }
+}
+
+/* efect de clipire cursor */
+@keyframes blink {
+  from { border-color: transparent }
+  to   { border-color: #00f0ff }
 }
