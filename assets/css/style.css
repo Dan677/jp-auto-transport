@@ -2969,49 +2969,15 @@ p:hover {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 .factor-icon {
-  position: relative;
   display: inline-block;
   font-size: 48px; /* mărimea iconului */
-  color: #00ffcc; /* culoarea iconului */
-  z-index: 1; /* iconul mereu deasupra */
+  color: #00ffcc;  /* culoarea iconului */
+  transition: transform 0.3s ease;
 }
 
-/* Radar sweep - apare doar la hover */
-.factor-icon:hover::before,
-.factor-icon:hover::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1; /* fundal sub icon */
-}
-
-/* Fasciculul radar */
-.factor-icon:hover::before {
-  background: conic-gradient(rgba(0,255,204,0.4), transparent 70%);
-  animation: radar-sweep 3s linear infinite;
-}
-
-/* Pulsul radar */
-.factor-icon:hover::after {
-  background: radial-gradient(circle, rgba(0,255,204,0.15) 20%, transparent 70%);
-  animation: radar-pulse 2s infinite ease-out;
-}
-
-/* animații */
-@keyframes radar-sweep {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to   { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes radar-pulse {
-  0%   { transform: translate(-50%, -50%) scale(0.8); opacity: 0.7; }
-  70%  { transform: translate(-50%, -50%) scale(1.2); opacity: 0; }
-  100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+/* Skew la hover */
+.factor-icon:hover {
+  transform: skew(15deg, 5deg);
 }
 .footer-logo-wrapper {
   position: relative;
@@ -3103,4 +3069,49 @@ p:hover {
   60% {
     transform: translateY(-5px);
   }
+}
+.about-values li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  animation: bounceText 2s infinite;
+}
+
+@keyframes bounceText {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+.footer-text {
+  animation: pulseText 2s infinite;
+  font-weight: 500;
+}
+
+@keyframes pulseText {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+.footer-icon {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 0 8px;
+  transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+  transform: skew(15deg, 5deg);
 }
