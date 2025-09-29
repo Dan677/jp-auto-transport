@@ -3241,3 +3241,22 @@ p:hover {
     box-shadow: 0 0 6px var(--dark-neon-mov); /* mai mic glow */
   }
 }
+/* ===========================
+   LIGHT MODE - Butoane clare
+   =========================== */
+@media (prefers-color-scheme: light) {
+  .light-mode .btn-cookie {
+    background: transparent !important;
+    color: #000 !important; /* text negru */
+    border: 2px solid #00aaff !important; /* albastru electric */
+    text-shadow: none !important; /* fără glow */
+    box-shadow: 0 0 6px rgba(0,170,255,0.6) !important; /* mic efect neon discret */
+  }
+
+  .light-mode .btn-cookie:hover {
+    color: #00aaff !important; /* text devine albastru electric la hover */
+    background: rgba(0,170,255,0.08) !important; /* un mic accent */
+    border-color: #00ccff !important; /* mai intens la hover */
+    box-shadow: 0 0 10px rgba(0,170,255,0.8) !important;
+  }
+}
